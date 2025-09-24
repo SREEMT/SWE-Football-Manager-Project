@@ -1,0 +1,49 @@
+S/W Eng Proj Notes:
+
+Required:
+--------------
+
+Pages:
+	1) Main Page:
+		- Live Scoreboard
+		- Posts
+	2) Calendar/Matches Page:
+		- Bracket
+		- Match History
+		- Live Scoreboard
+	3) Team Profile Page:
+		- Team composition
+	4) Profile Page:
+		- Team member info
+		- Register Teens
+	5) Log in/out Page:
+		- Sign in
+		- Log in
+
+5 Roles:
+	1) Admin:
+		- (Calendar) Register and generates bracket
+		- (Teams) Modify team composition
+		- (Calendar) Rate matches
+		- (Main) Posts and like/dislike
+	2) Manager:
+		- (Teams) Invite team members
+		- (Teams) Only owns 1 team
+		- (Teams) Modify team branding
+		- (Calendar) Rate matches
+		- (Main) Posts and like/dislike
+	3) Adult:
+		- (Teams) Accept invites to teams 
+		- (Teams) Accept invites for Teens
+		- (Teams) Responsibility Disclaimer
+		- (Calendar) Rate matches
+		- (Main) Posts and like/dislike
+	4) Teen:
+		- (
+		- (Calendar) Rate matches
+		- (Main) Posts and like/dislike
+		- (Main) Unable to see FLAGGED posts
+	5) Guest:
+		-
+		-
+		-
