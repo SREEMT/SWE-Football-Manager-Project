@@ -1,0 +1,39 @@
+- web app to manage a sports league for teens
+- have responsible adults register themselves and teams
+- have function to auto generate bracket for league
+- focus on football(soccer)
+- team and individual player stats
+- landing page should have content/feed from parents. focus on parent interactivity.
+- blue colors for ui
+- branding: app should have logo. we design logo. dont show clients face
+- make it look normal but function is priority
+- landing page should have comments, videos, posts by registered users. uploaded content should be flagged and hidden from unregistered users.
+- 5 roles:
+- admin
+- adult
+- minor, registered by adult and must have resposibility disclaimer each time a minor is registered.
+- team manager
+- guest
+- basic contact info for adults and minors and ability to add profile picture and display names
+- guests cannot have info
+- team managers can create one and only one team
+- only registered minors can be invited and registered adults can only accept
+- once a season begins, only teams with a certain (11) number or more can be accepted.
+- matches should contain time, date, place, teams competing, type (normal, playoff, final). only admins can manage, anyone can watch.
+- Calendar feature. Display only season but can also show 12 months.
+- Scoreboard for season
+- PROFESSOR IS INTO SOCCER BE CAREFUL!!
+- Scoreboard should be ordered by points
+- playoff bracket should randomly generate based off the best 8 teams and update after a match is finalized.
+- match details must be updated live by an admin. saved as a time machine for match.
+- live feed if possible
+- send notifications to people interested in a match (optional, use redis)
+- people can post live comments
+- Optional Mobile functionality!!
+- A lot of freedom with tech stack
+- live reactions like facebook, sad face, smile, dislike, like, etc.
+- order comments based by current/recent
+- When a season ends it is stored as history, include matches and results
+- stored/opened a week after/before season
+- people who can see past seasons is up to us (guests, admins, or etc.)
+- multiple seasons can go on but focus on making it work with one.
