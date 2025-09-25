@@ -74,15 +74,34 @@ Main:
 	> Like/Dislike System
 	> Flagged Posts for Teens
 Calendar:
+- Bracket
+	> Show brackets for all types of matches
+	> Can be made only with teams 11 or more
 - Calendar
-	> Upcoming games shown
-	> 3 Catagories: Playoffs,
+	> Upcoming and previous games shown
+	> Click a day, sent to Match Overview
+- Match Overview
+	> Time, date, place, teams competing, type (normal, playoff, final)
+	> Rate a match with thumbs up or down
 Teams:
-- 
+- Team roster
+	> Show alphabetical list of teams
+- Team Overview
+	> Team composition
+	> Able to modify team branding (Logo, description)
+	> Only Admin can mofiy team composition
+- Invite System
+	> Adults can only accept for themselves and Teen from here
 Profile:
--
+- Team member info and team association
+	> User can be in multiple teams?
+	> Manager profiles can only own ONE team
+- Invite System
+	> Invite as a Manager
 Log in:
--
+- Very first page
+	> Log in required or continue as guest
+	> Saves data for account
 
 
 
