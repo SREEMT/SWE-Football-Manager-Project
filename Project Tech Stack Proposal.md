@@ -43,6 +43,7 @@ Structured way to learn and includes a ton of resources outside this document.
 - [Redis Official Website](https://redis.io/)
 - [Redis Docs](https://redis.io/docs/latest/)
 - [Redis Quick-Start](https://redis.io/docs/latest/get-started/)
+- [Rails Getting Started (Condensed Guide)](https://guides.rubyonrails.org/getting_started.html)
 - [Redis Pub/Sub Guide (Video)](https://www.youtube.com/watch?v=KIFA_fFzSbo)
 
 ### React
