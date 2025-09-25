@@ -20,6 +20,8 @@ We are also required to implement real time chat and score feed. I propose the u
 
 I also propose the usage of a pub/sub design for data streaming for the chat and live score. Redis supports this and is design for these kind of problems. Users can "publish" a chat and then anyone "subscribed" to the match (on match webpage) will see the chat pop up. The published chat will be sent to the Redis server where it will distribute it to the subscribers.
 
+I havent added this, but I propose using Azure for hosting since each of us are given $100 worth of credist as students. It can be used to host web apps. This might not be necessary but would be cool for the final presentation and experience. This is not important.
+
 # Resources:
 
 ### [Odin Project](https://www.theodinproject.com/paths/full-stack-ruby-on-rails)
