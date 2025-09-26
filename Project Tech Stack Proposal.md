@@ -64,3 +64,4 @@ Structured way to learn and includes a ton of resources outside this document.
 ### Other
 - [TailwindCSS (for UI)](https://tailwindcss.com/plus)
 - [Chat Design Choice Guide (Video)](https://www.youtube.com/watch?v=1LIyqHsum2g)
+- [Figma (Design Platform)](https://www.figma.com/)
