@@ -1,0 +1,108 @@
+S/W Eng Proj Notes:
+
+Pages:
+	1) Main Page:
+		- Live Scoreboard
+		- Posts
+	2) Calendar/Matches Page:
+		- Bracket
+		- Match History
+		- Live Scoreboard
+	3) Team Profile Page:
+		- Team composition
+		- Team Logo
+	4) Profile Page:
+		- Team member info
+		- Register Teens
+	5) Log in/out Page:
+		- Sign in
+		- Log in
+
+5 Roles:
+	1) Admin:
+		- (Calendar) Register and generates bracket
+		- (Teams) Modify team composition
+		- (Calendar) Rate matches
+		- (Main) Posts and like/dislike
+		- (Profile) Self Profile & connection to Teen accounts
+	2) Manager:
+		- (Teams) Invite team members
+		- (Teams) Only owns 1 team
+		- (Teams) Modify team branding
+		- (Calendar) Rate matches
+		- (Main) Posts and like/dislike
+		- (Profile) Self Profile & connection to Teen accounts
+	3) Adult:
+		- (Teams) Accept invites to teams 
+		- (Teams) Accept invites for Teens
+		- (Teams) Responsibility Disclaimer
+		- (Calendar) Rate matches
+		- (Main) Posts and like/dislike
+		- (Profile) Self Profile & connection to Teen accounts
+	4) Teen:
+		- (Teams) Can only VIEW teams
+		- (Calendar) Rate matches
+		- (Main) Posts and like/dislike
+		- (Main) Unable to see FLAGGED posts
+		- (Profile) Self Profile & marked as Teen
+	5) Guest:
+		- (Main) Able to VIEW page
+		- (Team) Able to VIEW page
+		- (Calendar) Able to VIEW page
+		- (Profile) Only VIEW other profiles
+
+-------------------------
+ROLE SUMMARY			|
+-------------------------
+________|  Main  |  Calendar  |  Teams  |  Profile  |  Log In  |
+Admin	| MOD    |  MOD		  |  MOD	|  MOD		|  YES
+Manager	| POST   |  POST	  |  LIMMOD	|  MODSELF	|  YES
+Adult	| POST   |  POST	  |  LIMMOD |  MODSELF	|  YES
+Teen	| LIMPOST|  LIMPOST	  |  VIEW	|  MODSELF	|  YES
+Guest	| VIEW   |  VIEW	  |  VIEW	|  VIEW		|  NO
+
+
+Features Detailed:
+=============================
+Main:
+- Live Scoreboard
+	> Clock/Timer
+	> Live Score
+	> Current Teams playing
+	> Live Goal History
+- Posts
+	> Like/Dislike System
+	> Flagged Posts for Teens
+Calendar:
+- Bracket
+	> Show brackets for all types of matches
+	> Can be made only with teams 11 or more
+- Calendar
+	> Upcoming and previous games shown
+	> Click a day, sent to Match Overview
+- Match Overview
+	> Time, date, place, teams competing, type (normal, playoff, final)
+	> Rate a match with thumbs up or down
+Teams:
+- Team roster
+	> Show alphabetical list of teams
+- Team Overview
+	> Team composition
+	> Able to modify team branding (Logo, description)
+	> Only Admin can mofiy team composition
+- Invite System
+	> Adults can only accept for themselves and Teen from here
+Profile:
+- Team member info and team association
+	> User can be in multiple teams?
+	> Manager profiles can only own ONE team
+- Invite System
+	> Invite as a Manager
+Log in:
+- Very first page
+	> Log in required or continue as guest
+	> Saves data for account
+
+
+
+
