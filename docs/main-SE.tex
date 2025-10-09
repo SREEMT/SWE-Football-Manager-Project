@@ -89,16 +89,91 @@ S2 & Story Example 2 & 2 & As a user, I want to write a user story example, so t
 \section{System Design}
 
 \subsection{Architecture}
-[Which type of software architecture are you team following? Layered architecture, MVC, other? What are the main modules for your software?]
+We will be using a Model-View-Controller (MVC) architecture since the Rails API is designed to support MVC. Frontend will utilize react, backend is using Redis and MongoDB, while the Rails API handles all the endpoints and logic.\\
+Potential Main Modules:
+\begin{itemize}
+    \item User Management Module
+    \item Team Management Module
+    \item League Management Module
+    \item Analytics Module
+    \item Admin Panel Module
+    \item Notification Module
+\end{itemize}
 
 \subsection{Diagrams}
 [CS482, on sprints/iterations 2-3, you need to create and update a diagram (check the assignment for which type of diagram). On CS496, since before sprint/iteration 1 you should have a class diagram and keep it up-to-date.]
 
 \subsection{Technology}
-[ Which technologies are you going to use to implement your project? This should include the chosen programming language, main frameworks/libraries, and database or data storage. Testing framework is essential here as well.]
+\begin{table}[h!]
+\centering
+\begin{tabular}{|l|l|p{8cm}|}
+\hline
+\textbf{Tech} & \textbf{Type} & \textbf{Usage} \\ \hline
+Ruby & Language & Backend \\ \hline
+Rails & Framework & Web application framework \\ \hline
+Docker & Containerizer & Containerize the app for consistency \\ \hline
+Redis & RAM-Based Database & Quick data retrieval and updates; ideal for real-time data \\ \hline
+React & UI Framework & Used for UI design and implementation \\ \hline
+MongoDB & Schema-Based Database & Long-term data storage; performance not critical \\ \hline
+RSpec & Testing tool & Used to test ruby code\\ \hline
+\end{tabular}
+\caption{Technologies used in the project}
+\label{tab:technologies}
+\end{table}
 
 \subsection{Coding Standards}
-[Are your team going to follow any coding standards? For example, using a naming convention for Database tables (like only singular lowercase names). Another example, only allowing code with unit tests and above 60\% coverage to be committed (good convention since testing is going to be evaluated). If you need inspiration to define your coding standards, the Extreme Programming approach has a set of coding, design, and test rules.]
+\subsubsection{Naming}
+
+\begin{itemize}
+    \item \textbf{Global Variables:} All caps and underscores for spaces.  
+    Examples: \texttt{VARIABLE}, \texttt{TEST}, \texttt{MIN\_NUM}
+    
+    \item \textbf{Classes:} Capitalized and CamelCase.  
+    Examples: \texttt{Class}, \texttt{ClassGuide}, \texttt{ExTwo}
+    
+    \item \textbf{Functions:} Lowercase with underscores for spaces. Avoid using numbers.  
+    Examples: \texttt{function}, \texttt{function\_two}, \texttt{print\_all\_one}
+    
+    \item \textbf{Variables:} Same as functions, but numbers do not require underscores.  
+    Examples: \texttt{n}, \texttt{x}, \texttt{x2}, \texttt{print\_status}
+    
+    \item \textbf{Files:} File names should be descriptive and follow variable naming rules unless another convention is necessary.  
+    Examples: \texttt{test\_file.txt}, \texttt{grid\_layout.py}, \texttt{App.jsx}
+    
+    \item \textbf{Folders:} Same as files. Keep names general and simple.  
+    Examples: \texttt{folder}, \texttt{folder\_two}, \texttt{src}
+\end{itemize}
+
+\subsubsection{Code Formatting}
+
+\begin{itemize}
+    \item Include a blank line between each function.
+    \item Use consistent and readable loop structures.
+    \item Place comments above functions and significant code blocks.
+    \item Inline comments should be aligned to the right of the code line they describe.
+    \item Maintain consistency throughout the codebase.
+\end{itemize}
+
+\subsubsection{Commenting Rules}
+
+\begin{itemize}
+    \item Comments must be placed above each function explaining its purpose.
+    \item Comments must be placed above each class.
+    \item Comments should be detailed and easy to understand.
+    \item Inline comments (for specific lines) must appear to the right of that line.
+    \item Comments for code blocks should be placed above the block and explain its function.
+    \item Create and follow standard templates for class and function comments.
+\end{itemize}
+
+\subsubsection{Coding Principles}
+
+\begin{itemize}
+    \item Follow the \textbf{DRY (Don't Repeat Yourself)} principle when designing code.
+\end{itemize}
+\subsubsection{Testing}
+    \begin{itemize}
+    \item Only allow code with unit tests and with at least 65\% coverage to be committed.
+\end{itemize}
 
 \subsection{Data}
 [What is the main structure of your data? In SQL-like databases, this would be the planning of the main tables, their attributes, and interactions with other tables (basically an ER diagram). In NoSQL databases, this would be the main collections and general attributes of the JSON you will store in each collection.]
