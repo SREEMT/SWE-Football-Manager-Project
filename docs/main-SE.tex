@@ -209,7 +209,139 @@ RSpec & Testing tool & Used to test ruby code\\ \hline
 \end{itemize}
 
 \subsection{Data}
-[What is the main structure of your data? In SQL-like databases, this would be the planning of the main tables, their attributes, and interactions with other tables (basically an ER diagram). In NoSQL databases, this would be the main collections and general attributes of the JSON you will store in each collection.]
+\subsection{Data}
+Our data will be in MongoDB. Below is the Entity-Relationship list that we will implement to the database:
+\begin{itemize}
+    \item \textbf{Entity: Admin}
+        \begin{itemize}
+            \item Attributes:
+                \begin{itemize}
+                    \item Name
+                    \item Username
+                    \item Password
+                \end{itemize}
+            \item Relationships:
+                \begin{itemize}
+                    \item MODIFY Teams, Profiles, Matches, Posts, and Calendar
+                    \item Can RATE Matches and Posts
+                    \item Can COMMENT on Posts
+                \end{itemize}
+        \end{itemize}
+    \item \textbf{Entity: Team Manager}
+        \begin{itemize}
+            \item Attributes:
+                \begin{itemize}
+                    \item Name
+                    \item Username
+                    \item Password
+                    \item Team
+                \end{itemize}
+            \item Relationships:
+                \begin{itemize}
+                    \item INVITE Profiles
+                    \item ADD a Team
+                    \item VIEW Teams, Profiles, and Calendar
+                    \item Can RATE Matches and Posts
+                    \item Can COMMENT on Posts
+                \end{itemize}
+        \end{itemize}
+    \item \textbf{Entity: Adult}
+        \begin{itemize}
+            \item Attributes:
+                \begin{itemize}
+                    \item Name
+                    \item Username
+                    \item Password
+                    \item Team
+                    \item Children
+                \end{itemize}
+            \item Relationships:
+                \begin{itemize}
+                    \item ACCEPT INVITES from Team Manager
+                    \item ACCEPT INVITES to their Teen from Team Manager
+                    \item VIEW Teams, Profiles, and Calendar
+                    \item Can RATE Matches and Posts
+                    \item Can COMMENT on Posts
+                \end{itemize}
+        \end{itemize}
+    \item \textbf{Entity: Teen}
+        \begin{itemize}
+            \item Attributes:
+                \begin{itemize}
+                    \item Name
+                    \item Username
+                    \item Password
+                    \item Team
+                    \item Adult Supervisor
+                \end{itemize}
+            \item Relationships:
+                \begin{itemize}
+                    \item CHILD OF a Adult
+                    \item VIEW Teams, Profiles, and Calendar
+                    \item Can RATE Matches and Posts
+                    \item Can COMMENT on Posts
+                \end{itemize}
+        \end{itemize}
+    \item \textbf{Entity: Guest}
+        \begin{itemize}
+            \item Relationships:
+                \begin{itemize}
+                    \item VIEW Matches, Teams, Profiles, Posts and Calendar
+                \end{itemize}
+        \end{itemize}
+    \item \textbf{Entity: Team}
+        \begin{itemize}
+            \item Attributes:
+                \begin{itemize}
+                    \item Players
+                    \item Team Name
+                    \item Team Logo
+                    \item Team Manager
+                \end{itemize}
+        \end{itemize}
+    \item \textbf{Entity: Match}
+        \begin{itemize}
+            \item Attributes:
+                \begin{itemize}
+                    \item Score
+                    \item Teams
+                    \item Rating
+                    \item Comments
+                    \item History
+                \end{itemize}
+            \item Relationships:
+                \begin{itemize}
+                    \item Can VIEW a Team
+                \end{itemize}
+        \end{itemize}
+    \item \textbf{Entity: Calendar}
+        \begin{itemize}
+            \item Attributes:
+                \begin{itemize}
+                    \item Matches
+                \end{itemize}
+            \item Relationships:
+                \begin{itemize}
+                    \item VIEWS Matches
+                \end{itemize}
+        \end{itemize}
+    \item \textbf{Entity: Profile}
+        \begin{itemize}
+            \item Attributes:
+                \begin{itemize}
+                    \item Name
+                    \item Team Name
+                \end{itemize}
+        \end{itemize}
+    \item \textbf{Entity: Post}
+        \begin{itemize}
+            \item Attributes:
+                \begin{itemize}
+                    \item Comment
+                    \item Reactions
+                \end{itemize}
+        \end{itemize}
+\end{itemize}
 
 \subsection{UI Mocks}
 \begin{figure}[h]
