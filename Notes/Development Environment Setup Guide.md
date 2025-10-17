@@ -9,6 +9,8 @@
 | React   | UI Framework         | For UI design and Implementation                              |
 | MongoDB | Schema-Based DB      | Long term data storage, no need for speed                     |
 
+---
+
 ### Pre-Setup...
 
 Before following this setup guide, please update your WSL Ubuntu machine with these steps.
@@ -17,6 +19,9 @@ Before following this setup guide, please update your WSL Ubuntu machine with th
 3. Full System Upgrade (If necessary):```sudo apt full-upgrade -y```
 4. Update Snap Packages:```sudo snap refresh```
 5. Reboot System:```sudo reboot```
+
+---
+
 ### Ruby Setup
 
 This project will utilize Ruby 3.4.5 and can be downloaded by running:
@@ -26,6 +31,9 @@ This project will utilize Ruby 3.4.5 and can be downloaded by running:
 
 If it shows the wrong version, updating the repository with the correct package will be needed. This can be done with curl.
 Ruby comes with RSpec but this project will be utilizing another testing software for Rails.
+
+---
+
 ### Rails Setup
 
 This project will utilize Rails 8.0.2 and can be downloaded by running:
@@ -43,6 +51,8 @@ IMPORTANT:
 I strongly recommend each member to follow this Rails guide after installing everything listed in this document. Creating a new repository to do this is necessary.
 [Getting Started with Rails]([Getting Started with Rails — Ruby on Rails Guides](https://guides.rubyonrails.org/getting_started.html))
 This guide will have you setup a store webapp and familiarize you with the MVC structure in rails and what each folder/file does. This can be done in a day but will greatly improve knowledge with Rails.
+
+---
 
 ### Redis Setup
 
@@ -69,6 +79,9 @@ and then, ```ping``` to test the connection.
 running ```INFO server``` will give you all the server info including the Redis version.
 
 Further Reading: [Install Redis on Linux - Official Redis Site]([Install Redis on Linux | Docs](https://redis.io/docs/latest/operate/oss_and_stack/install/archive/install-redis/install-redis-on-linux/))
+
+---
+
 ### MongoDB Setup
 
 MongoDB will be downloaded through ruby:
@@ -87,6 +100,8 @@ Example:
 Other than that, it is just like any MongoDB database. More info regarding Rails w/ Rails will be listed here:
 [Ruby on Rails - Mongoid]([Quick Start - Ruby on Rails - Mongoid - MongoDB Docs](https://www.mongodb.com/docs/mongoid/current/quick-start-rails/?msockid=0d4b825c1f57626029f194231eb663a4))
 
+---
+
 ### React Setup
 
 This was already done but we will use Vite with react and npm.
@@ -98,3 +113,9 @@ node -v
 v20.19.5
 ```
 Then you need to run ```npm install``` in the frontend folder to install all dependencies.
+
+---
+
+### Final Notes
+
+This project will be deployed by using Docker containers for the Rails API, Redis Server, and MongoDB server. All of them will work together but this document is for devlopment and testing purposes.
