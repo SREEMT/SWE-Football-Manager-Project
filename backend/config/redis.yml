@@ -1,0 +1,9 @@
+development:
+  url: redis://localhost:6379/0
+
+test:
+  url: redis://localhost:6379/1
+  # Use a different DB for testing to avoid conflicts with development data
+
+production:
+  url: <%= ENV['REDIS_URL'] %>
