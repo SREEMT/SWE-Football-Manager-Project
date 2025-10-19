@@ -1,0 +1,101 @@
+# ======================================================
+# General
+# ======================================================
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.project
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# Environment files (never commit secrets)
+.env
+.env.local
+.env.*.local
+**/.env
+**/.env.local
+**/.env.*.local
+
+# Logs / Temp
+log/*
+tmp/*
+!/log/.keep
+!/tmp/.keep
+
+# ======================================================
+# Backend (Rails API with MongoDB + Redis)
+# ======================================================
+/backend/.bundle
+/backend/vendor/bundle
+/backend/log/*
+/backend/tmp/*
+!/backend/log/.keep
+!/backend/tmp/.keep
+
+# MongoDB-related
+/backend/mongoid.yml
+/backend/dump/
+*.bson
+*.ns
+
+# Redis-related
+/backend/redis-data/
+dump.rdb
+appendonly.aof
+
+# Rails cache, uploads, and runtime
+/backend/public/system/*
+/backend/storage/*
+/backend/coverage/
+/backend/spec/tmp/*
+/backend/.byebug_history
+/backend/.rspec
+
+# Rails secrets
+/backend/config/master.key
+/backend/config/credentials.yml.enc
+
+# Node modules for JS bundling (if Rails uses JS)
+/backend/node_modules/
+.backend-node_modules
+/backend/yarn-error.log
+/backend/package-lock.json
+
+# ======================================================
+# Frontend (React + Vite)
+# ======================================================
+/frontend/node_modules/
+/frontend/dist/
+/frontend/.vite/
+/frontend/.cache/
+/frontend/yarn-error.log
+/frontend/package-lock.json
+/frontend/.eslintcache
+/frontend/coverage/
+/frontend/build/
+
+# ======================================================
+# System / Misc
+# ======================================================
+.sass-cache
+.byebug_history
+coverage/
+*.log
+*.tmp
+*.bak
+
+# ======================================================
+# Deployment / Docker
+# ======================================================
+docker-compose.override.yml
+.docker
+docker/
+Dockerfile
+Dockerfile.*
+.envrc
+.tool-versions
