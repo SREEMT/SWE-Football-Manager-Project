@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import NotFound from './NotFound'
 
 export default function Login() {
     const [email, setEmail] = useState('')
@@ -33,7 +34,9 @@ export default function Login() {
                 <button type="submit">login</button>
             </form>
 
-            <a href="https://github.com/SREEMT/SWE-Football-Manager-Project/tree/login-logout-iter-1" target='_blank' >Forgot Password</a>
+            <a class= "another_link" href="/notFound" target='_blank' >Forgot Password</a> 
+             
+           
         </div>
     )
 }
