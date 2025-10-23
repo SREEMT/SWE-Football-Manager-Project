@@ -32,6 +32,8 @@ export default function Login() {
                 />
                 <button type="submit">login</button>
             </form>
+
+            <a href="https://github.com/SREEMT/SWE-Football-Manager-Project/tree/login-logout-iter-1" target='_blank' >Forgot Password</a>
         </div>
     )
 }
