@@ -2,7 +2,7 @@
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
+  text-align: left;
 }
 
 .logo {
@@ -39,4 +39,23 @@
 
 .read-the-docs {
   color: #888;
+}
+
+.menudropdown{
+  position: "absolute";
+  top: "100%";
+  left: "0";
+  border: "1px solid #ccc";
+  padding: "10px";
+  margin: "0";
+}
+
+.menudropdowndutton{
+  padding: "10px";
+  cursor: "pointer";
+}
+
+.item{
+  padding: "5px 10px";
+  cursor: "pointer";
 }
