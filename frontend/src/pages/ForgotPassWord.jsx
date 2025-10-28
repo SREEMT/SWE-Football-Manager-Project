@@ -3,22 +3,23 @@ import { Link } from "react-router-dom";
 
 export default function ForgotPassword() {
        const [email, setEmail] = useState("");
-    const [error, setError] = useState("");
     const [message, setMessage] = useState("");
 
     const validateEmail = (e) =>
         /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e.trim());
  
     const checkEmail = (e) => {
-        e.preventDefault();
-    if (!validateEmail(email)) {
+        e.preventDefault();  // Prevent message from disappearing on submit
+    if (email === "") {
+        setMessage("Email field cannot be empty.");
+    }
+    else if (!validateEmail(email)) {
         setMessage("Please enter a valid email address.");
     }
-    else if (email === "") {
-        setMessage("Email field cannot be empty.");
-    }else {
+    else {
         setMessage("A password reset link has been sent to your email.");
-    }}
+        // create pop-up for user to type in code they received
+    }} 
 
     return ( 
         <div>

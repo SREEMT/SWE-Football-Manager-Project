@@ -34,7 +34,7 @@ export default function Login() {
                 <button type="submit">login</button>
             </form>
 
-            <a class= "another_link" href="/notFound" target='_blank' >Forgot Password</a> 
+            <a class= "another_link" href="forgotPassword" target='_blank' >Forgot Password</a> 
              
            
         </div>
