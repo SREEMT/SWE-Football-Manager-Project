@@ -43,7 +43,7 @@ export default function Login() {
     // Renders the page for the login
     // Also handles user input and calls api function
     return (
-        <div>
+        <div className='loginClass'>
             <h1>Login</h1>
             <form onSubmit={handleSubmit}>
                 <input
@@ -61,7 +61,7 @@ export default function Login() {
                 <button type="submit">login</button>
             </form>
 
-            <a class= "another_link" href="/notFound" target='_blank' >Forgot Password</a> 
+            <a class= "another_link" href="forgotPassword" target='_blank' >Forgot Password</a> 
              
            
         </div>
