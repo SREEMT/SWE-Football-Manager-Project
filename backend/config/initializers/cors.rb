@@ -15,12 +15,11 @@
 #   end
 # end
 
-
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins 'http://localhost:3000', 'http://localhost:3001' # Change to your frontend development port (commonly 3000) or use '*' during early development
-    resource '*',
+    origins "http://localhost:3000", "http://localhost:3001" # Change to your frontend development port (commonly 3000) or use '*' during early development
+    resource "*",
       headers: :any,
-      methods: [:get, :post, :put, :patch, :delete, :options, :head]
+      methods: [ :get, :post, :put, :patch, :delete, :options, :head ]
   end
 end

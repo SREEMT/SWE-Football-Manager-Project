@@ -28,7 +28,7 @@ tmp/*
 !/tmp/.keep
 
 # ======================================================
-# Backend (Rails API with MongoDB + Redis)
+# Backend (Rails API with SQLite3 + Redis)
 # ======================================================
 /backend/.bundle
 /backend/vendor/bundle
@@ -37,11 +37,9 @@ tmp/*
 !/backend/log/.keep
 !/backend/tmp/.keep
 
-# MongoDB-related
-/backend/mongoid.yml
-/backend/dump/
-*.bson
-*.ns
+# SQLite3 database files
+/backend/db/*.sqlite3
+/backend/db/*.sqlite3-journal
 
 # Redis-related
 /backend/redis-data/
@@ -62,7 +60,6 @@ appendonly.aof
 
 # Node modules for JS bundling (if Rails uses JS)
 /backend/node_modules/
-.backend-node_modules
 /backend/yarn-error.log
 /backend/package-lock.json
 
