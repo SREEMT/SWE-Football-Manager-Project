@@ -1,7 +1,16 @@
+require 'simplecov'
+
+# Simplecov initialize for coverage report generation
+    SimpleCov.start 'rails' do
+      add_filter '/bin/'
+      add_filter '/db/'
+      add_filter '/test/' # if using rspec, filter '/spec/'
+      coverage_dir 'public/coverage'
+    end
+
 ENV["RAILS_ENV"] ||= "test"
 require_relative "../config/environment"
 require "rails/test_help"
-require 'simplecov'
 
 module ActiveSupport
   class TestCase
@@ -12,11 +21,6 @@ module ActiveSupport
     fixtures :all
 
     # Add more helper methods to be used by all tests here...
-    # require 'simplecov'
-    SimpleCov.start 'rails' do
-      add_filter '/bin/'
-      add_filter '/db/'
-      add_filter '/test/' # if using rspec, filter '/spec/'
-    end
+    
   end
 end
