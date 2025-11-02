@@ -12,7 +12,7 @@ function App() {
   return (
      <div>
       <nav>
-        <Link to="/">Home</Link> | <Link to="/login">Login</Link>
+        <Link to="/">Home</Link> | <Link to="/inbox">Inbox</Link> | <Link to="/login">Login</Link>
       </nav>
 
       <AppRoutes />
