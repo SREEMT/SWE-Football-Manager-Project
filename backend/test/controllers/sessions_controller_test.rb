@@ -46,4 +46,16 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
     delete "/session"
     assert_response :no_content
   end
+
+  # Return current logged in user session for validation
+  test "Return curr user logged in" do
+    post "/session", params: {email_address: @user.email_address, password: "s3cr3t"}
+    cookie = response.headers["Set-Cookie"]
+
+    get "/session", headers: { "Cookie" => cookie }
+
+    assert_response :success
+    json = JSON.parse(response.body)
+    assert_equal @user.email_address, json["user"]["email"]
+  end
 end
