@@ -6,26 +6,19 @@ class PasswordsController < ApplicationController
   end
 
   def create
-    if user = User.find_by(email_address: params[:email_address])
-      PasswordsMailer.reset(user).deliver_later
-    end
+  user = User.find_by(email_address: params[:email_address])
+  puts "===> Received params: #{params.inspect}"
 
-    redirect_to new_session_path, notice: "Password reset instructions sent (if user with that email address exists)."
 
-    
+    # redirect_to new_session_path, notice: "Password reset instructions sent (if user with that email address exists)."
+
     if user
-      otp = rand(100000..999999).to_s  # Generate 6-digit OTP
-      user.update(reset_otp: otp, otp_sent_at: Time.current)
-
-      # Send OTP email asynchronously
-      PasswordsMailer.with(user:, otp:).send_otp.deliver_later
-
+       puts "===> Found user #{user.email_address}"
       render json: { message: "OTP sent to your email." }, status: :ok
     else
-      render json: { error: "Email not f ound." }, status: :not_found
+       puts "===> No user found for #{params[:email_address]}"
+      render json: { error: "Email not found." }, status: :not_found
     end
-  end
-
   end
 
   def edit
@@ -33,7 +26,7 @@ class PasswordsController < ApplicationController
 
   def update
     if @user.update(params.permit(:password, :password_confirmation))
-      redirect_to new_session_path, notice: "Password has been reset."yu
+      redirect_to new_session_path, notice: "Password has been reset."
     else
       redirect_to edit_password_path(params[:token]), alert: "Passwords did not match."
     end
