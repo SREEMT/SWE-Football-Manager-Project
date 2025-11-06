@@ -8,16 +8,18 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
-
+ 
   return (
      <div>
       <nav>
-        <Link to="/">Home</Link> | <Link to="/login">Login</Link> | <Link to="/sign-up">Sign-Up</Link>
+        <header>
+        <Link to="/">Home</Link>|<Link to="/login">Login</Link>|<Link to="/sign-up">Sign-Up</Link>
+        </header>
       </nav>
 
       <AppRoutes />
     </div>
-  )
+  ) 
 }
 
 export default App
