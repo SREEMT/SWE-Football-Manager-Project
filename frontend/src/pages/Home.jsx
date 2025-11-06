@@ -15,29 +15,6 @@ export default function Home() {
                 <li className="item"><a href="#" target="_blank" style={{color: "#ffffffff"}}>Profile</a></li>
             </ul>
 
-            {/*Matches*/}
-            <h1>Ongoing Matches</h1>
-            <Link to={matchLink} className="matchBox">
-                <div className="matchInfo">
-                    <img src={team1_logo} alt={`${team1} Logo`} className="teamLogo" />
-                    <span className="teamNames">{team1} vs {team2}</span>
-                    <img src={team2_logo} alt={`${team2} Logo`} className="teamLogo" />
-                    <p>{score}</p>
-                    <p>Date: {date}</p>
-                    <p>Time: {time}</p>
-                </div>
-                <button>Good</button>
-                <button>Neutural</button>
-                <button>Bad</button>
-            </Link>
-
-            {/*Posts*/}
-            <div className="postBox">
-                <h2>Title</h2>
-                <img src={post_img} className="imgPic" />
-                <button>Like</button>
-                <button>Dislike</button>
-            </div>
 
 
 
