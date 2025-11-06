@@ -1,5 +1,6 @@
 class NotificationsController < ApplicationController
-  before_action :authenticate_user!         # Check if user is authenticated
+  include Authentication
+  before_action :require_login         # Check if user is authenticated
   before_action :set_notification, only: [:update, :destroy]
 
   # Index user and GET /notifications
