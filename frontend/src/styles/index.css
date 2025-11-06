@@ -13,6 +13,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+header {
+width: auto; 
+height: auto;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
