@@ -1,13 +1,12 @@
 import { useState } from 'react'
 import NotFound from './NotFound'
+import API_URL from '../lib/api'
 
 export default function Login() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [error, setError] = useState(null)
     const [success, setSuccess] = useState(false)
-
-    const API_URL = 'http://localhost:3000'         //Global var for api url, change this to support .env files for prod and dev
 
     // Function that calls API for user auth
     // DO NOT TOUCH -- FUNCTIONALITY WILL BE ADDED
