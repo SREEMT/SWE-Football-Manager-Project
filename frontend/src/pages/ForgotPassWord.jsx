@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import '../styles/ForgotPass.css'
 
 export default function ForgotPassword() {
        const [email, setEmail] = useState("");
@@ -8,7 +9,7 @@ export default function ForgotPassword() {
     const validateEmail = (e) =>
         /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e.trim());
  
-    const checkEmail = (e) => {
+    const checkEmail = async (e) => {
         e.preventDefault();  // Prevent message from disappearing on submit
     if (email === "") {
         setMessage("Email field cannot be empty.");
@@ -16,10 +17,30 @@ export default function ForgotPassword() {
     else if (!validateEmail(email)) {
         setMessage("Please enter a valid email address.");
     }
-    else {
-        setMessage("A password reset link has been sent to your email.");
+    else {  
+           try {
+    const response = await fetch("http://localhost:3000/passwords", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email_address: email }),
+    });
+
+    const data = await response.json();
+
+    if (response.ok) {
+      setMessage(data.message);
+      // TODO: show OTP input popup here
+      
+   setMessage("A password reset link has been sent to your email.");
         // create pop-up for user to type in code they received
-    }} 
+    } else {
+      setMessage(data.error);
+    }
+  } catch (err) {
+      console.error("Fetch error:", err);
+    setMessage("Something went wrong. Please try again later.");
+  }
+    }};
 
     return ( 
         <div>

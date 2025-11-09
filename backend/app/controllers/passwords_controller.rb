@@ -6,23 +6,30 @@ class PasswordsController < ApplicationController
   end
 
   def create
-    if user = User.find_by(email_address: params[:email_address])
-      PasswordsMailer.reset(user).deliver_later
-    end
+  user = User.find_by(email_address: params[:email_address])
+    # redirect_to new_session_path, notice: "Password reset instructions sent (if user with that email address exists)."
 
-    redirect_to new_session_path, notice: "Password reset instructions sent (if user with that email address exists)."
+    if user
+       puts "===> Found user #{user.email_address}"
+      render json: { message: "OTP sent to your email." }, status: :ok
+    else
+       puts "===> No user found for #{params[:email_address]}"
+      render json: { error: "Email not found." }, status: :not_found
+    end
   end
 
   def edit
   end
 
   def update
-    if @user.update(params.permit(:password, :password_confirmation))
-      redirect_to new_session_path, notice: "Password has been reset."
+   if @user.update(params.permit(:password, :password_confirmation))
+    redirect_to new_session_path, notice: "Password has been reset."
     else
-      redirect_to edit_password_path(params[:token]), alert: "Passwords did not match."
-    end
+    redirect_to edit_password_path(params[:token]), alert: "Passwords did not match."
+   end
   end
+
+
 
   private
     def set_user_by_token
