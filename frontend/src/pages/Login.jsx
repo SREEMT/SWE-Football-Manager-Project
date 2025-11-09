@@ -1,40 +1,32 @@
 import { useState } from 'react'
-import NotFound from './NotFound'
-import API_URL from '../lib/api'
+import { useNavigate } from 'react-router-dom'
+import { useAuth } from '../context/AuthContext'
 
 export default function Login() {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [error, setError] = useState(null)
     const [success, setSuccess] = useState(false)
+    const navigate = useNavigate()                      // Used to reload page or take users to other pages
+    const { login } = useAuth()
 
     // Function that calls API for user auth
-    // DO NOT TOUCH -- FUNCTIONALITY WILL BE ADDED
     const handleSubmit = async (e) => {
         e.preventDefault()
+        setError(null)
         console.log('Login form submitted:', { email, password })
         
         //Login api call
         try {
-            const response = await fetch(`${API_URL}/session`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json', },
-                credentials: 'include',
-                body: JSON.stringify({
-                    email_address: email,
-                    password: password,
-                }),
-            })
-
-            if (!response.ok) {
-                const data = await response.json().catch(() => ({}))
-                throw new Error(data.error || 'Login failed')
+            const success = await login(email, password)
+            if (success) {
+                console.log('Login successful')
+                navigate('/', { replace: true})
+            } else {
+                setError('Invalid Credentials')
             }
-
-            setSuccess(true)
-            console.log('Login Success')
         } catch (err) {
-            console.error('login error: ', err)
+            console.error('Login error:', err)
             setError(err.message)
         }
     }
