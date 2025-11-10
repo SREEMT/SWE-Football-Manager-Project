@@ -5,7 +5,7 @@ class PasswordsControllerTest < ActionDispatch::IntegrationTest
     @user = User.create!(
       email_address: "david1999@gmail.com", # match your actual DB column
       password: "mypasword333",
-      role: "user",
+      role: 1,
       first_name: "John",
       last_name: "Doe",
       phone_number: "5555555555",

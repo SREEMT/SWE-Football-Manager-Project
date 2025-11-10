@@ -10,7 +10,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
         first_name: "David",
         last_name: "Osayi",
         date_of_birth: "1999-07-25",
-        role: "user"
+        role: 1
       }
     }
 
