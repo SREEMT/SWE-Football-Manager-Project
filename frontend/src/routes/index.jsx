@@ -3,6 +3,7 @@ import Home from '../pages/Home'
 import Login from '../pages/Login'
 import NotFound from '../pages/NotFound'
 import ForgotPassword from '../pages/ForgotPassWord'
+import Inbox from '../pages/Inbox'
 
 // Page routing paths for site
 export default function AppRoutes() {
@@ -13,7 +14,7 @@ export default function AppRoutes() {
       <Route path="/sign-up" element={<Sign-Up />} />
       <Route path="/notFound" element={<NotFound />} />
       <Route path="/forgotPassword" element={<ForgotPassword />} />
-
+      <Route path="/inbox" element={<Inbox />} />
     </Routes>
   )
 }
