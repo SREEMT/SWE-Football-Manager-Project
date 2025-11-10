@@ -29,8 +29,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
 
  test "should get index and return all users" do
   get users_url, as: :json
-  assert_response :success
-
+  assert_response :ok
   json = JSON.parse(response.body)
   assert_kind_of Array, json
 end
