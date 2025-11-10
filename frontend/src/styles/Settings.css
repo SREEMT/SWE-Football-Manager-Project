@@ -1,0 +1,18 @@
+.settingsContainer {
+    background: #FFFFFF;
+    border-radius: 15%;
+    color: #1E1E1E;
+    font-size: 7px;
+    font-family: "Roboto", Arial;
+}
+
+main h1{
+    color: #07326A;
+    font-size: 14px;
+    font-family: "Keania One", sans-serif;
+}
+
+.profileImage button{
+    background: #07326A;
+    border-radius: 15%;
+}
