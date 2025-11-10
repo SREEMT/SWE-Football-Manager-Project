@@ -1,7 +1,8 @@
 // Test home page tied to root
 import { Component, useState } from 'react'
 import '../styles/Home.css'
-import { Link } from 'react-router-dom'  
+import { Link } from 'react-router-dom'
+import { Navbar } from '../components/Navbar'  
 
 import place_holder from '../assets/placeHolder.png';
 import web_logo from '../assets/WebLogo.png';
@@ -19,6 +20,8 @@ export default function Home() {
     const [postCaption,setpostCaption] = useState('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.');
 
     return (
+        <>
+        <header><Navbar/></header>
         <main className="home-page">
             <img src={web_logo}/>
             <h1>Welcome to the Home Page</h1>
@@ -64,5 +67,6 @@ export default function Home() {
 
 
         </main>
+        </>
     )
 }
