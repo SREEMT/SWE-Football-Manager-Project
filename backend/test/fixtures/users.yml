@@ -3,7 +3,17 @@
 one:
   email_address: one@example.com
   password_digest: <%= password_digest %>
+  first_name: One
+  last_name: Example
+  phone_number: "1234567890"
+  role: 1
+  date_of_birth: 2000-01-01
 
 two:
   email_address: two@example.com
   password_digest: <%= password_digest %>
+  first_name: Two
+  last_name: Example
+  phone_number: "0987654321"
+  role: 2
+  date_of_birth: 1998-12-31

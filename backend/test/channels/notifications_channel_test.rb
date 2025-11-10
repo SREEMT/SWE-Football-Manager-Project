@@ -2,7 +2,14 @@ require "test_helper"
 
 class NotificationsChannelTest < ActionCable::Channel::TestCase
   setup do
-    @user = User.create!(email_address: "test@example.org", password: "s3cr3t")
+    @user = User.create!(
+      email_address: "test@example.org", 
+      password: "s3cr3t", 
+      first_name: "First", 
+      last_name: "Last", 
+      phone_number: "123456789", 
+      role: 3, 
+      date_of_birth: "2003-10-31")
   end
 
   # subscribe user to channel
