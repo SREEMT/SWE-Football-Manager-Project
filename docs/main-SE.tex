@@ -134,7 +134,11 @@ Potential Main Modules:
 \end{itemize}
 
 \subsection{Diagrams}
-Modelling: Your team must create a Sequence Diagram that presents one of the scenarios for Live Scoring or Live Matches in your software. This diagram must be added to your documentation on the Diagrams subsection (inside the System Design section).
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{images/Live score .png}
+    \caption{Live Score example created by Justin}
+\end{figure}
 
 \subsection{Technology}
 \begin{table}[h!]
@@ -433,13 +437,17 @@ Previous Goal:
 
 
 \subsubsection{Work Done}
-[Which stories did you complete in this iteration/sprint. Which ones did you partially complete? Who worked on which story? You may elaborate in paragraph(s) to add more detail about the work done.]
+Alberto got U2 Inbox Screen completed and fully integrated. This feature has real time notifications and a mark as read feature. Logged in users will receive notifications if that notification is tied to them. He also worked on the backend to implement ActionCable and channel subscriptions for any future features. He also refactored the authentication system in the frontend to make authentication easier in the future. Protected routes were also created to add a layer of security. Ose has partially worked on U18 Forgot Password feature but it is not fully functional. The user model was modified to implement role, date of birth, and names. Other goals have not been met as of writing this.
 
 \subsubsection{Testing Coverage}
-image here
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{images/Screenshot 2025-11-09 224237.png}
+    \caption{Test coverage from Alberto's end}
+\end{figure}
 
 \subsubsection{Retroespective \& Reflection}
-[What were the pitfalls, challenges, and issues you had in this iteration? How can you address them to improve the process in the next iteration? Did anything not go according to plan? Why so and how to avoid the same mistake? Write a personal reflection on what you learned in this iteration (even if a small technical thing like Database storage).]
+What we have learned from this is that we need more teamwork and communication. We also need to have everyone complete and work on their tasks in a timely manner. We cant have people work on their tasks last minute in case there is a major issue with the project as a whole. Implementing GitHub actions is something that will be necessary from now on. People need to commit enough, at least once daily and with good documentation. We need to utilize GitHub issues to track and document any bugs or features being implemented correctly. Using PRs is also included in this. Having other team mebers review each other's code is also something we should do.
 
 \subsection{Iteration/Sprint 3}
 \subsubsection{Planning}
