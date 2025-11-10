@@ -11,7 +11,14 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
   
   # Setup for test cases for session controller, handles auth
   setup do
-    @user = User.create!(email_address: "you@example.org", password: "s3cr3t")
+    @user = User.create!(
+      email_address: "test@example.org", 
+      password: "s3cr3t", 
+      first_name: "First", 
+      last_name: "Last", 
+      phone_number: "123456789", 
+      role: 3, 
+      date_of_birth: "2003-10-31")
   end
 
   test "log in with valid email & pass" do

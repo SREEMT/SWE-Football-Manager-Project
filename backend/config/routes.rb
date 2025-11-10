@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
   get "home/index"          # Getting coverage report home page
   root 'home#index'     # Home page that shows coverage report if
+
   resource :session, only: [:new, :create, :destroy]
   resources :passwords, only: [:new, :create, :edit, :update], param: :token
+
+  resource :session
+  resources :passwords, param: :token
+  resources :notifications, only: [:index, :update, :destroy]
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
