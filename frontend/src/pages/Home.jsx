@@ -6,6 +6,10 @@ import { Navbar } from '../components/Navbar'
 
 import place_holder from '../assets/placeHolder.png';
 import web_logo from '../assets/WebLogo.png';
+import Post from '../components/PostBox';
+import MatchCard from '../components/MatchBox';
+
+import SignUp from "./SignUp";
 
 export default function Home() {
     const [matchLink,setMatchLink] = useState('');
@@ -29,40 +33,20 @@ export default function Home() {
 
             {/*Link list*/}
             <ul className="menudropdown">
-                <li className="item"><Link to="/" style={{color: "#ffffff"}}>Home</Link></li>
-                <li className="item"><Link to="/calendar" style={{color: "#ffffff"}}>Calendar</Link></li>
-                <li className="item"><Link to="/profile" style={{color: "#ffffff"}}>Profile</Link></li>
+                <li className="item"><Link to="/" style={{color: "#ffffff"}}><nav>Home</nav></Link></li>
+                <li className="item"><Link to="/calendar" style={{color: "#ffffff"}}><nav>Calendar</nav></Link></li>
+                <li className="item"><Link to="/profile" style={{color: "#ffffff"}}><nav>Profile</nav></Link></li>
+                <li className="item"><Link to="/signup" style={{color: "#ffffff"}}><nav>Sign Up</nav></Link></li>
             </ul>
 
             {/*Matches*/}
             <h1>Ongoing Matches</h1>
-            <Link to={matchLink || '#'} className="matchBox">
-                <div className="matchInfo">
-                    <img src={team1_logo} alt={`${team1} Logo`} className="teamLogo" />
-                    <span className="teamNames">{team1} vs {team2}</span>
-                    <img src={team2_logo} alt={`${team2} Logo`} className="teamLogo" />
-                    <p>{score}</p>
-                    <p>Date: {date}</p>
-                    <p>Time: {time}</p>
-                </div>
-                <div className="reactionButtons">
-                    <button>Good</button>
-                    <button>Neutral</button>
-                    <button>Bad</button>
-                </div>
-            </Link>
+            <MatchCard/>
 
             {/*Posts*/}
-            <div className="postBox">
-                <h2>Post Title</h2>
-                <img src={post_img} className="imgPic" />
-                <p>{postCaption}</p>
-                <div className="likeButtons">
-                    <button>Like</button>
-                    <button>Dislike</button>
-                </div>
-            </div>
+            <Post/>
 
+            <SignUp/>
 
 
 
