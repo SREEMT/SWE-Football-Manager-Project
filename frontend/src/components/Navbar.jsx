@@ -37,6 +37,13 @@ export default function Navbar() {
                 <Link to="/inbox">Inbox</Link> 
                 </>
             )}
+
+            { isAuthenticated && (
+                <>
+                { "|" }
+                <Link to="/settings">Settings</Link>
+                </>
+            )}
                 
             { !isAuthenticated && (
                 <>
