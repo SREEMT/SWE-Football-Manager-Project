@@ -62,5 +62,6 @@ export default function ForgotPassword() {
                        
                     <button class="button1" onClick={checkEmail}>Send Code</button>
                     <p>{message}</p>
+                    
              </form>  
                 </div>)}   
