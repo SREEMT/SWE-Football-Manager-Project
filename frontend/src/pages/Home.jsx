@@ -1,7 +1,7 @@
 // Test home page tied to root
 import '../styles/Home.css'
 import { Link } from 'react-router-dom'
-import { Navbar } from '../components/Navbar'  
+import  Navbar  from '../components/Navbar'  
 
 export default function Home() {
     return (

@@ -1,18 +1,114 @@
+.settings {
+    background-color: #d9d9d9;
+    padding: 14px;
+}
+
 .settingsContainer {
     background: #FFFFFF;
-    border-radius: 15%;
+    border-radius: 15px;
     color: #1E1E1E;
     font-size: 7px;
     font-family: "Roboto", Arial;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
 }
 
-main h1{
+.settings h1 {
     color: #07326A;
-    font-size: 14px;
+    font-size: 20px;
     font-family: "Keania One", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.40px;
+    text-align: left;
+    display: block;
+    margin-bottom: 14px;
 }
 
-.profileImage button{
-    background: #07326A;
-    border-radius: 15%;
+.settingsNav {
+    border-right: 1px solid #d9d9d9;
+    padding-right: 16px;
+}
+
+.settingsNav li {
+    margin-bottom: 10px;
+}
+
+.settingsNav li a {
+    color: #07326a;
+    font-size: 14px;
+}
+
+.settingsContent h2 {
+    color: #07326A;
+    font-size: 18px;
+    font-family: "Keania One", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.40px;
+    text-align: left;
+    display: block;
+    margin-bottom: 14px;
+}
+
+.profileImage {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profileImage svg {
+    width: 46px;
+    height: 46px;
+}
+
+.btn-primary {
+    background-color: #07326A;
+    color: #fff;
+    border-radius: 15px;
+    padding: 7px 10px;
+    font-size: 13px;
+}
+
+form.profile-form {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 10px;
+    height: 100%;
+ }
+
+ form.profile-form .formGroup {
+    height: 65%;
+ }
+
+ .formRow {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+ }
+
+form label {
+    font-size: 12px;
+    display: block;
+    margin-bottom: 4px;
+}
+
+form input, form textarea {
+    background-color: #e9eef9;
+    border-radius: 15px;
+    display: block;
+}
+
+.formColumn {
+    width: 100%;
+}
+
+form input {
+    padding: 6px 0;
+    width: 100%;
+}
+
+form textarea {
+    resize: none;
+    height: 100%;
 }
