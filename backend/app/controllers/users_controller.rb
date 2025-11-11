@@ -1,15 +1,14 @@
 class UsersController < ApplicationController
 
 # Skip authentication for signup and logout
-skip_before_action :require_authentication, only: [:create, :new, :logout]
-# Skip authentication for index action in test environment
-skip_before_action :require_authentication, only: [:index], if: -> { Rails.env.test? }
+allow_unauthenticated_access only: %i[new create]
 
 # GET /userscl
-  def index
+=begin  def index
     @users = User.all
       render json: @users, status: :ok
   end
+=end
 
     # POST /signup
    def new
@@ -20,19 +19,20 @@ skip_before_action :require_authentication, only: [:index], if: -> { Rails.env.t
     def create
         @user = User.new(user_params)
         if @user.save
-            render json: { message: 'User created successfully', user: safe_user(@user) }, status: :created
+            start_new_session_for @user
+            render json: { message: 'User created successfully and logged in', user: safe_user(@user) }, status: :created
         else
             render json: { message: "could not do the sign up" }, status: :unprocessable_entity
         end
     end
 
-    # DELETE /logout
+=begin
     def logout
         reset_session
         render json: { message: 'Logged out' }, status: :ok
     end
+=end
 
-    
     private
     def user_params #parameters for user signup
         params.require(:user).permit(
