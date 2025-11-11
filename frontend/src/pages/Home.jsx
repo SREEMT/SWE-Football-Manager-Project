@@ -2,7 +2,7 @@
 import { Component, useState } from 'react'
 import '../styles/Home.css'
 import { Link } from 'react-router-dom'
-import { Navbar } from '../components/Navbar'  
+import  Navbar  from '../components/Navbar'  
 
 import place_holder from '../assets/placeHolder.png';
 import web_logo from '../assets/WebLogo.png';
