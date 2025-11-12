@@ -25,7 +25,6 @@ export default function Home() {
 
     return (
         <>
-        <header><Navbar/></header>
         <main className="home-page">
             <img src={web_logo}/>
             <h1>Welcome to the Home Page</h1>
