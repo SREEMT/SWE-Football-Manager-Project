@@ -1,8 +1,12 @@
 import { Link } from 'react-router-dom'
 import { RxAvatar } from "react-icons/rx";
+import { PasswordVerify } from "PasswordVerify.jsx"
 import '../styles/Settings.css'
 
 export default function Settings(){
+
+    const deleteAccount = async () => {}
+
     return (
         <section className='settings'>
             <h1>Settings</h1>
@@ -12,7 +16,7 @@ export default function Settings(){
                         <li><Link to="#">Profile change</Link></li>
                         <li><Link to="#">Password change</Link></li>
                         <li><Link to="#">Notification change</Link></li>
-                        <li><Link to="#">Delete profile</Link></li>
+                        <li><button onClick={deleteAccount}>Delete Account</button>
                     </ul>
                 </div>
                 <div className='settingsContent'>
