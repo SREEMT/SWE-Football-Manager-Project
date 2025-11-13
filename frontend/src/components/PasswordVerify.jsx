@@ -23,3 +23,27 @@ const handleVerify = async (password) => {
             setError(err.message)
         }
     }
+
+    // Placeholder card genearted by AI
+    // Will be replaced or highly modified to be fully functional
+    // FOR TESTING
+    return (
+    <div className="card">
+      <h3>Delete Account</h3>
+
+      {!verified ? (
+        <form onSubmit={handleVerify}>
+          <input
+            type="password"
+            placeholder="Enter your password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            disabled={loading}
+          />
+          <button type="submit" disabled={loading}>
+            {loading ? 'Verifying...' : 'Verify Password'}
+          </button>
+        </form>
+      )
+    )
+    
