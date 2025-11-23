@@ -1,11 +1,15 @@
 import { Link } from 'react-router-dom'
 import { RxAvatar } from "react-icons/rx";
-import { PasswordVerify } from "PasswordVerify.jsx"
+import VerifyCard from "../components/PasswordVerify.jsx"
 import '../styles/Settings.css'
+import { useState } from 'react';
 
 export default function Settings(){
+    const [showVerifyCard, setShowVerifyCard] = useState(false)
 
-    const deleteAccount = async () => {}
+    const handleDelete = () => {
+        setShowVerifyCard(true)
+    }
 
     return (
         <section className='settings'>
@@ -16,7 +20,7 @@ export default function Settings(){
                         <li><Link to="#">Profile change</Link></li>
                         <li><Link to="#">Password change</Link></li>
                         <li><Link to="#">Notification change</Link></li>
-                        <li><button onClick={deleteAccount}>Delete Account</button>
+                        <li><button onClick={handleDelete}>Delete Account</button></li>
                     </ul>
                 </div>
                 <div className='settingsContent'>
@@ -58,6 +62,7 @@ export default function Settings(){
                     </form>
                 </div>
             </div>
+            {showVerifyCard && <VerifyCard />}
         </section>
     )
 }
