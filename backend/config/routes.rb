@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :matches
   get "home/index"          # Getting coverage report home page
   root 'home#index'     # Home page that shows coverage report if
 
