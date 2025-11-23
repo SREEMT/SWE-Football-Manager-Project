@@ -35,6 +35,11 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
 end
 =end 
 
+test "POST /create renders new user form" do
+    get new_user_url
+    assert_response :success
+  end
+
   test "POST /users with valid parameters creates a user" do
     assert_difference("User.count", 1) do
       post users_url, params: @valid_user_params, as: :json
@@ -55,15 +60,7 @@ end
     assert_response :unprocessable_entity
     json = JSON.parse(response.body)
     assert_includes json["message"], "could not do the sign up"
-  end
-
-=begin  test "DELETE /users/logout resets session" do
-    delete "/logout", as: :json
-    assert_response :ok
-    json = JSON.parse(response.body)
-    assert_equal "Logged out", json["message"]
-  end
-=end
+    end
 
 test "POST /users with valid_parameters_are_created_and_logged_in" do
   assert_difference("User.count", 1) do
@@ -75,4 +72,4 @@ test "POST /users with valid_parameters_are_created_and_logged_in" do
   assert_equal "User created successfully and logged in", json["message"]
   assert_equal "david2009@gmail.com", json["user"]["email_address"]
 end
-end
+end 
