@@ -31,6 +31,17 @@ class PasswordsControllerTest < ActionDispatch::IntegrationTest
     assert_equal "Password has been reset.", json["message"]
   end
 
+  test "PATCH /passwords/:token with mismatched confirmation returns error" do
+    token = @user.generate_password_reset_token
+    patch password_url(token: token),
+            params: { password: "newpassword", password_confirmation: "differentpassword" },
+            as: :json
+    assert_response :not_acceptable
+    json = JSON.parse(response.body)
+    assert_includes json["message"], "Password did not match"
+  end
+
+
   test "POST /passwords with invalid email returns error" do
     post passwords_url, params: { email_address: "invalid@example.com" }, as: :json
     assert_response :not_found
