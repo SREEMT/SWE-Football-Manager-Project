@@ -4,8 +4,8 @@ Rails.application.routes.draw do
 
   resource :session, only: [:new, :create, :destroy]
   resources :passwords, only: [:new, :create, :edit, :update], param: :token
-  resources :users, only: [:index, :new, :create]
-  delete "/logout", to: "users#logout"
+  resources :users, only: [:new, :create]
+  #  elete "/logout", to: "users#logout"
   resources :notifications, only: [:index, :update, :destroy]
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
