@@ -4,6 +4,7 @@ import Login from '../pages/Login'
 import NotFound from '../pages/NotFound'
 import ForgotPassword from '../pages/ForgotPassWord'
 import Inbox from '../pages/Inbox'
+import Settings from '../pages/Settings'
 
 // Page routing paths for site
 export default function AppRoutes() {
@@ -15,6 +16,7 @@ export default function AppRoutes() {
       <Route path="/notFound" element={<NotFound />} />
       <Route path="/forgotPassword" element={<ForgotPassword />} />
       <Route path="/inbox" element={<Inbox />} />
+      <Route path="/settings" element={<Settings />} />
     </Routes>
   )
 }
