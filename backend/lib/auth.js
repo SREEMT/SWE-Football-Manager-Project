@@ -31,7 +31,7 @@ export async function logout() {
 
 // Retrieve user session & data
 export async function checkSession() {
-    const response = await fetch(`${API_URL}/session`, {
+    const response = await fetch(`${API_URL}/sessin`, {
         method: `GET`,
         credentials: `include`,
     })
