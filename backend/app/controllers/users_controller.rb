@@ -26,13 +26,6 @@ allow_unauthenticated_access only: %i[new create]
         end
     end
 
-=begin
-    def logout
-        reset_session
-        render json: { message: 'Logged out' }, status: :ok
-    end
-=end
-
     private
     def user_params #parameters for user signup
         params.require(:user).permit(
