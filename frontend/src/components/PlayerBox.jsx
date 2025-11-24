@@ -1,0 +1,20 @@
+import { Link } from 'react-router-dom';
+import '../styles/components/MatchBox.css';
+
+import place_holder from '../assets/placeHolder.png';
+
+export default function PlayerBox({
+    name = "John Doe",
+    position = 'default',
+    number = 0,
+    goals = 0,
+    assists = 0}
+){
+
+  return(
+    <div className='playerOverlay'>
+      <img src={place_holder} alt={`player`} className="playerPhoto" />
+      <p>{name}   {position}    {goals}     {assists}</p>
+    </div>
+  );
+}

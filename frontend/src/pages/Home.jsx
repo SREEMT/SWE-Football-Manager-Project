@@ -46,8 +46,6 @@ export default function Home() {
             {/*Posts*/}
             <Post/>
 
-            <SignUp/>
-
 
 
         </main>
