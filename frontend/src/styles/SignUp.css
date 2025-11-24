@@ -1,0 +1,7 @@
+.signUpHeader {
+  display: flex;                 /* enables side-by-side layout */
+  justify-content: space-between;/* pushes h1 left, nav right */
+  align-items: center;           /* vertically center them */
+  padding: 10px 20px;
+  background-color: rgb(63, 98, 212);
+}
