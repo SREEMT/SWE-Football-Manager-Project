@@ -61,15 +61,18 @@ function Players() {
       <h3>Roster</h3>
       <ul className="playerList">
         {players.map((p) => (
+          <>
           <li key={p.id} onClick={() => setSelectedPlayer(p)}>
             <PlayerBox name={p.name} position={p.position} goals={p.goals} assists={p.assists} />
           </li>
+          <br /><br /></>
         ))}
       </ul>
 
       {/* Modal */}
       {selectedPlayer && (
         <PlayerCard onClose={() => setSelectedPlayer(null)}>
+          <img src={place_holder} alt={`player`} className="playerPhoto" />
           <h2>{selectedPlayer.name}</h2>
           <p>Position: {selectedPlayer.position}</p>
           <p>Jersey #: {selectedPlayer.number}</p>

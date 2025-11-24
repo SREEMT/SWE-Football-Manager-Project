@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import '../styles/components/MatchBox.css';
+import '../styles/components/PlayerBox.css';
 
 import place_holder from '../assets/placeHolder.png';
 
@@ -12,9 +12,10 @@ export default function PlayerBox({
 ){
 
   return(
+    <>
     <div className='playerOverlay'>
-      <img src={place_holder} alt={`player`} className="playerPhoto" />
       <p>{name}   {position}    {goals}     {assists}</p>
     </div>
+    </>
   );
 }

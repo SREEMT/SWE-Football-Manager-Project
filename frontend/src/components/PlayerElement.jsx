@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import '../styles/components/MatchBox.css';
+import '../styles/components/PlayerElement.css';
 
 import place_holder from '../assets/placeHolder.png';
 
