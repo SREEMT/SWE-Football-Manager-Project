@@ -1,0 +1,14 @@
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.card h3 {
+    color: #07326A;
+    letter-spacing: 0.4px;
+}
+
+.card p {
+    color: #000;
+}

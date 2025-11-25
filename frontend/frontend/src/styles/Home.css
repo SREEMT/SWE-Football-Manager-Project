@@ -1,0 +1,42 @@
+.banner-wrapper {
+    display: grid;
+    grid-template-columns: 0.7fr 0.3fr;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #6E6D72;
+}
+
+.banner-content {
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px;
+    font-family: "Keania One", sans-serif;
+    padding: 10px;
+}
+
+.banner-content img {
+    height: 450px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.banner-content h1 {
+    color: #07326A;
+    font-size: 34px;
+    letter-spacing: 0.4px;
+    text-align: left;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.banner-content p {
+    font-size: 17px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
