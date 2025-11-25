@@ -2,7 +2,31 @@ require "test_helper"
 
 class MatchesControllerTest < ActionDispatch::IntegrationTest
   setup do
+    @user = User.create!(
+      email_address: "test@example.org", 
+      password: "s3cr3t", 
+      first_name: "First", 
+      last_name: "Last", 
+      phone_number: "123456789", 
+      role: 3, 
+      date_of_birth: "2003-10-31")
+    post "/session", params: { email_address: @user.email_address, password: "s3cr3t"}
+    @cookie = response.headers["Set-Cookie"]
+    
     @match = matches(:one)
+    @valid_params = {
+      match: {
+      location: "MyString",
+      match_date: "2025-11-23",
+      match_time: "2025-11-23 16:52:28",
+      match_type: 1,
+      players: { "Alice" => 1, "Bob" => 1, "Charlie" => 2 },
+      score1: 1,
+      score2: 1,
+      team1: "MyString",
+      team2: "MyString"
+      }
+    }
   end
 
   test "should get index" do
@@ -12,7 +36,7 @@ class MatchesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create match" do
     assert_difference("Match.count") do
-      post matches_url, params: { match: { location: @match.location, match_date: @match.match_date, match_time: @match.match_time, match_type: @match.match_type, players: @match.players, score1: @match.score1, score2: @match.score2, team1: @match.team1, team2: @match.team2 } }, as: :json
+      post matches_url, params: @valid_params, as: :json
     end
 
     assert_response :created
@@ -24,7 +48,7 @@ class MatchesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update match" do
-    patch match_url(@match), params: { match: { location: @match.location, match_date: @match.match_date, match_time: @match.match_time, match_type: @match.match_type, players: @match.players, score1: @match.score1, score2: @match.score2, team1: @match.team1, team2: @match.team2 } }, as: :json
+    patch match_url(@match), params: @valid_params, as: :json
     assert_response :success
   end
 

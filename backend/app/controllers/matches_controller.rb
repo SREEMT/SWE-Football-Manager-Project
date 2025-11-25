@@ -35,7 +35,7 @@ class MatchesController < ApplicationController
 
   # DELETE /matches/1
   def destroy
-    @match.destroy!
+    @match.destroy
     head :no_content
   end
 
