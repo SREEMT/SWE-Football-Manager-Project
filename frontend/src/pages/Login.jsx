@@ -47,16 +47,29 @@ export default function Login() {
                     <Link to="#" className='btn-secondary'>Guest</Link>
                 </div>
             </aside>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <h1>Login into your account</h1>
                 <div className="form-group">
-                    <input type="text" placeholder='Username' />
+                    <input 
+                    type="email"
+                    placeholder='Email'
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                    />
                 </div>
                 <div className="form-group">
-                    <input type="password" placeholder='Password' />
+                    <input
+                    type="password"
+                    placeholder='Password'
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
+                    />
                     <Link to="#" className='btn-link'>Forgot password?</Link>
                 </div>
-                <button className='btn-primary' type="submit">Sign-up</button>
+                {error && <p className="error">{error}</p>}
+                <button className='btn-primary' type="submit">Sign-in</button>
             </form>
             {/* <form onSubmit={handleSubmit}>
                 <input

@@ -1,27 +1,32 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { MdInbox } from "react-icons/md";
 import "../styles/components/Header.css";
 import { useEffect, useState } from "react";
+import { useAuth } from "../context/AuthContext";
 
 export default function Header() {
     const location = useLocation();
-    const [isLogin, setLogin] = useState(true); //change it to true to show the nav and buttons
+    const navigate = useNavigate();
+    const { isAuthenticated, logout } = useAuth() || {};
+    const [isLoginPage, setIsLoginPage] = useState(false);
 
     useEffect(() => {
-        if(location.pathname == "/login") {
-            setLogin(false);
-        } else {
-            setLogin(true);
+        setIsLoginPage(location.pathname === "/login");
+    }, [location.pathname]);
+    const handleLogout = async () => {
+        if (logout){
+            await logout();
         }
-    }, [isLogin])
+        navigate("/", {replace: true});
+    };
 
     return (
-        <header className={`${isLogin ? '' : 'header-login'}`}>
-            <div className={`${isLogin ? 'container' : 'container-fluid'}`}>
+        <header className={isLoginPage ? 'header-login' : ""}>
+            <div className={isLoginPage ? 'container-fluid' : 'container'}>
                 <div className="header">
                     <span className="logo">Keeper</span>
-                    {
-                        isLogin ? <>
+                    {!isLoginPage && ( 
+                        <>
                             <nav>
                                 <ul>
                                     <li><Link to="/">Home</Link></li>
@@ -30,21 +35,47 @@ export default function Header() {
                                     <li><Link to="/brackets">Bracket</Link></li>
                                 </ul>
                             </nav>
+
                             <ul className="header-buttons">
-                                <li><MdInbox /></li>
-                                <li><Link to="/login">Sign in</Link></li>
-                                <li><button className="btn-primary">Join Keeper</button></li>
+                                
+                                {isAuthenticated && (
+                                    <li>
+                                        <Link to="/inbox">
+                                            <MdInbox />
+                                        </Link>
+                                    </li>
+                                )}
+
+                                {!isAuthenticated && (
+                                    <li>
+                                        <Link to="/login">
+                                            Sign in
+                                        </Link>
+                                    </li>
+                                )}
+
+                                {!isAuthenticated && (
+                                    <li><button className="btn-primary">Join Keeper</button></li>
+                                )}
+                                
+                                {isAuthenticated && (
+                                    <li>
+                                        <button className="btn-primary" onClick={handleLogout}>
+                                            Logout
+                                        </button>
+                                    </li>
+                                )}
                             </ul>
                         </>
-                            :
-                            <div className="login-text">
-                                <p>please login..</p>
-                            </div>
-                    }
-
+                    )}
+                    {isLoginPage && (
+                        <div ClassName="login-text">
+                            <p>Please login..</p>
+                        </div>
+                    )}
 
                 </div>
             </div>
         </header>
-    )
+    );
 }
