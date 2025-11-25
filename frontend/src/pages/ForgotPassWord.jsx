@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import '../styles/ForgotPass.css'
+import  API_URL  from "../lib/api.js";
 
 export default function ForgotPassword() {
        const [email, setEmail] = useState("");
@@ -19,7 +20,7 @@ export default function ForgotPassword() {
     }
     else {  
            try {
-    const response = await fetch("http://localhost:3000/passwords", {
+    const response = await fetch(`${API_URL}/password`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email_address: email }),
@@ -62,5 +63,6 @@ export default function ForgotPassword() {
                        
                     <button class="button1" onClick={checkEmail}>Send Code</button>
                     <p>{message}</p>
+                    
              </form>  
                 </div>)}   

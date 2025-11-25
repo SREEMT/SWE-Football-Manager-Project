@@ -47,7 +47,7 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
   test "logs out successfully" do
     # Login and check if login is success, fails if not
     post "/session", params: { email_address: @user.email_address, password: "s3cr3t" }
-    assert_response :success
+    assert_response :ok
 
     # Delete session and it should terminate session and return :no_content
     delete "/session"

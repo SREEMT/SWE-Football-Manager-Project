@@ -12,6 +12,7 @@ class PasswordsController < ApplicationController
     if user
        puts "===> Found user #{user.email_address}"
       render json: { message: "OTP sent to your email." }, status: :ok
+      token = user.generate_password_reset_token
     else
        puts "===> No user found for #{params[:email_address]}"
       render json: { error: "Email not found." }, status: :not_found
@@ -35,9 +36,12 @@ class PasswordsController < ApplicationController
 
   private
     def set_user_by_token
-      @user = User.find_by_password_reset_token!(params[:token])
-    rescue ActiveSupport::MessageVerifier::InvalidSignature
-      render json: { message: "Password reset link is invalid or has expired" }, status: :not_acceptable
+      @user = User.find_by(password_reset_token: params[:token])
+   
+      # Check if token is valid and not expired (15 minutes validity)
+      if @user.nil? || @user.password_reset_sent_at < 15.minutes.ago
+      render json: { message: "Password reset link is invalid or has expired" }, status: :unprocessable_entity
       # redirect_to new_password_path, alert: "Password reset link is invalid or has expired."
+      end 
     end
 end
