@@ -5,18 +5,23 @@ import NotFound from '../pages/NotFound'
 import ForgotPassword from '../pages/ForgotPassWord'
 import Inbox from '../pages/Inbox'
 import Settings from '../pages/Settings'
+import SignUp from '../pages/SignUp'
+import Brackets from '../pages/Brackets'
 
 // Page routing paths for site
 export default function AppRoutes() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/sign-up" element={<Sign-Up />} />
-      <Route path="/notFound" element={<NotFound />} />
-      <Route path="/forgotPassword" element={<ForgotPassword />} />
-      <Route path="/inbox" element={<Inbox />} />
-      <Route path="/settings" element={<Settings />} />
-    </Routes>
+    <main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/sign-up" element={<SignUp />} />
+        <Route path="/notFound" element={<NotFound />} />
+        <Route path="/forgotPassword" element={<ForgotPassword />} />
+        <Route path="/inbox" element={<Inbox />} />
+        <Route path="/settings" element={<Settings />} />
+        <Route path="/brackets" element={<Brackets />} />
+      </Routes>
+    </main>
   )
 }

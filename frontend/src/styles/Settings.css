@@ -4,14 +4,18 @@
 }
 
 .settingsContainer {
-    background: #FFFFFF;
     border-radius: 15px;
-    color: #1E1E1E;
-    font-size: 7px;
     font-family: "Roboto", Arial;
+    max-width: fit-content;
+    margin: 0 auto;
+}
+
+.settingsContentWrapper {
     display: flex;
     gap: 20px;
     padding: 20px;
+    background: #FFFFFF;
+    color: #1E1E1E;
 }
 
 .settings h1 {
@@ -23,6 +27,7 @@
     text-align: left;
     display: block;
     margin-bottom: 14px;
+    margin-left: 10px;
 }
 
 .settingsNav {
@@ -34,9 +39,14 @@
     margin-bottom: 10px;
 }
 
-.settingsNav li a {
+.btn-link {
     color: #07326a;
     font-size: 14px;
+    background-color: transparent;
+}
+
+.settingsContent {
+    min-width: 515px;
 }
 
 .settingsContent h2 {
@@ -61,31 +71,23 @@
     height: 46px;
 }
 
-.btn-primary {
-    background-color: #07326A;
-    color: #fff;
-    border-radius: 15px;
-    padding: 7px 10px;
-    font-size: 13px;
-}
-
 form.profile-form {
     display: flex;
     flex-direction: row;
     align-items: baseline;
     gap: 10px;
     height: 100%;
- }
+}
 
- form.profile-form .formGroup {
+form.profile-form .formGroup {
     height: 65%;
- }
+}
 
- .formRow {
+.formRow {
     display: flex;
     gap: 10px;
     margin-bottom: 10px;
- }
+}
 
 form label {
     font-size: 12px;
@@ -93,10 +95,12 @@ form label {
     margin-bottom: 4px;
 }
 
-form input, form textarea {
+form input,
+form textarea {
     background-color: #e9eef9;
     border-radius: 15px;
     display: block;
+    border: 1px solid #000;
 }
 
 .formColumn {
@@ -111,4 +115,35 @@ form input {
 form textarea {
     resize: none;
     height: 100%;
+}
+
+/* Mobile version */
+@media screen and (max-width: 576px) {
+
+    form.profile-form {
+        display: flex;
+        height: auto;
+        flex-direction: column-reverse;
+        gap: 0;
+        margin-top: 10px;
+    }
+
+    form.profile-form .formGroup {
+        width: 100%;
+        height: auto;
+    }
+
+    form.profile-form .formGroup textarea {
+        height: 94px;
+        width: 100%;
+    }
+
+    .settingsNav {
+        width: 40%;
+    }
+
+    .settingsNav li a {
+        color: #07326a;
+        font-size: 11px;
+    }
 }

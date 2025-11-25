@@ -1,0 +1,26 @@
+.settingsHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0D3BC3;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.settingsHeader span {
+    color: #6e6d72;
+    font-size: 30px;
+    font-family: "Rubik Mono One", monospace, serif;
+    text-transform: uppercase;
+    letter-spacing: 0.40px;
+}
+
+.settingsHeader ul {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.settingsHeader ul li{
+    display: flex;
+}

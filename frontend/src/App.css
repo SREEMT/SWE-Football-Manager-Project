@@ -35,8 +35,37 @@
   }
 } */
 
+.container {
+  max-width: 95%;
+  margin: 0 auto;
+}
+
+.container-fluid {
+  max-width: 100%;;
+}
+
 .card {
   padding: 2em;
+}
+
+.btn-primary {
+    background-color: #07326A;
+    color: #fff;
+    border-radius: 15px;
+    padding: 7px 10px;
+    font-size: 15px;
+}
+
+.btn-secondary {
+    background-color: #E9EEF9;
+    color: #1e1e1e;
+    border-radius: 15px;
+    padding: 7px 10px 8px;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 140px;
+    margin: 0 auto;
 }
 
 .read-the-docs {

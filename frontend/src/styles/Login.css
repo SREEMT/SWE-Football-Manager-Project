@@ -1,0 +1,85 @@
+.login-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin-top: -10px;
+    min-height: 97vh;
+}
+
+aside {
+    color: #fff;
+    height: 100%;
+    text-align: center;
+}
+
+aside .aside-upper {
+    background-color: #2238A4;
+    padding: 50px;
+    height: 65%;
+    padding-top: 200px;
+}
+
+.aside-upper h2 {
+    line-height: 26px;
+}
+
+.aside-upper h2, .aside-upper p {
+    margin-bottom: 20px;
+}
+
+.aside-lower {
+    background-color: #7182C7;
+    padding: 50px;
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.aside-lower p {
+    margin-bottom: 20px;
+}
+
+form {
+    background-color: #A0ACDC;
+    padding: 50px;
+    height: 100%;
+    padding-top: 200px;
+}
+
+aside h2, form h1 {
+    font-size: 38px;
+   font-family: "Keania One", sans-serif;
+}
+
+form h1 {
+    border-bottom: 3px solid #6E6D72;
+    padding-bottom: 20px;
+}
+
+.login-wrapper .form-group {
+    width: 300px;
+}
+
+.login-wrapper form input {
+    display: block;
+    background-color: #F7F7F7;
+    width: 100%;
+    padding: 10px 10px 8px;
+    border: none;
+}
+
+.login-wrapper .form-group .btn-link {
+    font-size: 12px;
+}
+
+.login-wrapper form input::placeholder {
+    font-size: 15px;
+}
+
+.login-wrapper form .btn-primary {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    margin: 0 auto;
+}
