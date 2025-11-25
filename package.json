@@ -1,6 +1,9 @@
 {
   "dependencies": {
+<<<<<<< HEAD
     "react-icons": "^5.5.0",
+=======
+>>>>>>> 93423f7c1121f04ba56805459f7e725986ff4a92
     "vite-plugin-svgr": "^4.5.0"
   }
 }

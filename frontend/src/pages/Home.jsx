@@ -37,7 +37,11 @@ export default function Home() {
                 <li className="item"><Link to="/calendar" style={{color: "#ffffff"}}><nav>Calendar</nav></Link></li>
                 <li className="item"><Link to="/profile" style={{color: "#ffffff"}}><nav>Profile</nav></Link></li>
                 <li className="item"><Link to="/sign-up" style={{color: "#ffffff"}}><nav>Sign Up</nav></Link></li>
+<<<<<<< HEAD
                 <li className="item"><Link to="/teamprofile" style={{color: "#ffffff"}}><nav>TeamProfile</nav></Link></li>
+=======
+                <li className="item"><Link to="/playerprofile" style={{color: "#ffffff"}}><nav>PlayerProfile</nav></Link></li>
+>>>>>>> 93423f7c1121f04ba56805459f7e725986ff4a92
             </ul>
 
             {/*Matches*/}
