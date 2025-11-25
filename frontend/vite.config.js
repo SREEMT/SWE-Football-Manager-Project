@@ -1,6 +1,9 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
+/* This is for svg calendar icon*/ 
+import svgr from "vite-plugin-svgr"
+
 // https://vite.dev/config/
 
 // export default defineConfig({
@@ -9,7 +12,7 @@ import react from '@vitejs/plugin-react'
 
 // Vite configuration with proxy setup for Rails backend
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), svgr()], // added svgr() here
   server: {
     port: 3001, // Optional: set a consistent port (e.g., 3001)
     proxy: {
