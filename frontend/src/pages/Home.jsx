@@ -40,23 +40,19 @@ export default function Home() {
                 </div>
                 <Cards />
             </div>
-            {/* <img src={web_logo}/>
+             {/* <img src={web_logo}/>
             <h1>Welcome to the Home Page</h1>
             <p>This is a placeholder to test page routing</p>
-
             <ul className="menudropdown">
                 <li className="item"><Link to="/" style={{color: "#ffffff"}}><nav>Home</nav></Link></li>
                 <li className="item"><Link to="/calendar" style={{color: "#ffffff"}}><nav>Calendar</nav></Link></li>
                 <li className="item"><Link to="/profile" style={{color: "#ffffff"}}><nav>Profile</nav></Link></li>
                 <li className="item"><Link to="/signup" style={{color: "#ffffff"}}><nav>Sign Up</nav></Link></li>
             </ul>
-
             <h1>Ongoing Matches</h1>
             <MatchCard/>
-
             <Post/>
-
-
+            <SignUp/> */}
 
         </section>
     )
