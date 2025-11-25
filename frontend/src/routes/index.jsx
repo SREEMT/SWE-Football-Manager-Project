@@ -8,6 +8,7 @@ import Settings from '../pages/Settings'
 import SignUp from '../pages/SignUp'
 import Brackets from '../pages/Brackets'
 import MatchesPage from '../pages/MatchesPage'
+import MatchShow from '../pages/MatchShow'
 
 // Page routing paths for site
 export default function AppRoutes() {
@@ -23,6 +24,7 @@ export default function AppRoutes() {
         <Route path="/settings" element={<Settings />} />
         <Route path="/brackets" element={<Brackets />} />
         <Route path="/matches" element={<MatchesPage />} />
+        <Route path="/matches/:id" element={<MatchShow />} />
       </Routes>
     </main>
   )
