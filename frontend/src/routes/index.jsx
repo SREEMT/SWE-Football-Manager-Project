@@ -7,6 +7,7 @@ import Inbox from '../pages/Inbox'
 import Settings from '../pages/Settings'
 import SignUp from '../pages/SignUp'
 import Brackets from '../pages/Brackets'
+import MatchesPage from '../pages/MatchesPage'
 
 // Page routing paths for site
 export default function AppRoutes() {
@@ -21,6 +22,7 @@ export default function AppRoutes() {
         <Route path="/inbox" element={<Inbox />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/brackets" element={<Brackets />} />
+        <Route path="/matches" element={<MatchesPage />} />
       </Routes>
     </main>
   )

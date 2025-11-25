@@ -33,6 +33,7 @@ export default function Header() {
                                     <li><Link to="/">Calendar</Link></li>
                                     <li><Link to="/">Team</Link></li>
                                     <li><Link to="/brackets">Bracket</Link></li>
+                                    <li><Link to="/matches">Matches</Link></li>
                                 </ul>
                             </nav>
 

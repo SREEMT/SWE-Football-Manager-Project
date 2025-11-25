@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :matches
   get "home/index"          # Getting coverage report home page
   root 'home#index'     # Home page that shows coverage report if
 
@@ -9,6 +8,8 @@ Rails.application.routes.draw do
   resource :session
   resources :passwords, param: :token
   resources :notifications, only: [:index, :update, :destroy]
+
+  resources :matches
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

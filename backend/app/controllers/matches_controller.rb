@@ -36,16 +36,17 @@ class MatchesController < ApplicationController
   # DELETE /matches/1
   def destroy
     @match.destroy!
+    head :no_content
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_match
-      @match = Match.find(params.expect(:id))
+      @match = Match.find(params(:id))
     end
 
     # Only allow a list of trusted parameters through.
     def match_params
-      params.expect(match: [ :match_time, :match_date, :location, :team1, :team2, :match_type, :players, :score1, :score2 ])
+      params.require(:match).permit(:match_time, :match_date, :location, :team1, :team2, :match_type, :players, :score1, :score2)
     end
 end
