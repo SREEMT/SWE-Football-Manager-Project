@@ -74,7 +74,6 @@ export default function Header() {
                             <p>Please login..</p>
                         </div>
                     )}
-
                 </div>
             </div>
         </header>
