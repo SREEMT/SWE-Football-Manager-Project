@@ -34,6 +34,13 @@ export default function Header() {
                                     <li><Link to="/">Team</Link></li>
                                     <li><Link to="/brackets">Bracket</Link></li>
                                     <li><Link to="/matches">Matches</Link></li>
+                                    {isAuthenticated && (
+                                    <li>
+                                        <Link to="/settings">
+                                            Settings
+                                        </Link>
+                                    </li>
+                                )}
                                 </ul>
                             </nav>
 
