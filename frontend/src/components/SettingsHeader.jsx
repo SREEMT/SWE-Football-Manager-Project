@@ -9,7 +9,6 @@ export default function SettingsHeader() {
         <div className="settingsHeader">
             <span>Keeper</span>
             <ul>
-                <li><MdInbox /></li>
                 <li><RxAvatar /></li>
                 <li><button className="btn-primary">Upload</button></li>
             </ul>
