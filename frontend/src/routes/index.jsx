@@ -4,10 +4,15 @@ import Login from '../pages/Login'
 import NotFound from '../pages/NotFound'
 import ForgotPassword from '../pages/ForgotPassWord'
 import Inbox from '../pages/Inbox'
+import SignUp from '../pages/SignUp'
 import Settings from '../pages/Settings'
 import Profile from '../pages/Profile'
 import SignUp from '../pages/SignUp'
 import TeamProfile from '../pages/TeamProfile'
+import Brackets from '../pages/Brackets'
+import MatchesPage from '../pages/MatchesPage'
+import MatchShow from '../pages/MatchShow'
+import Profile from '../pages/Profile'
 
 // Page routing paths for site
 export default function AppRoutes() {
@@ -22,7 +27,9 @@ export default function AppRoutes() {
       <Route path="/settings" element={<Settings />} />
       <Route path="/profile" element={<Profile />} />
       <Route path='/teamprofile' element={<TeamProfile />} />
-
-    </Routes>
+        <Route path="/brackets" element={<Brackets />} />
+        <Route path="/matches" element={<MatchesPage />} />
+        <Route path="/matches/:id" element={<MatchShow />} />
+      </Routes>
   )
 }
