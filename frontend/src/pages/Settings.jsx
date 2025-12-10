@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+import { RxAvatar } from "react-icons/rx";
 
 import '../styles/Settings.css'
 import SettingsHeader from '../components/SettingsHeader';

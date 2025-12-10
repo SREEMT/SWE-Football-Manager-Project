@@ -1,0 +1,112 @@
+.signUpHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgb(63, 98, 212);
+}
+
+.signUpPage{
+   background-image: url('../images/footballField.jpeg');
+   background-size: cover;
+}
+
+/*sign up field box */ 
+.signupFields{
+  background-color: rgb(223, 220, 220);
+  max-width: 1200px;
+  width: 100%;
+  border: 15px solid rgb(29, 159, 215);
+  padding: 50px;
+  height: auto;
+}
+
+.signupFields {
+margin: 20px auto;
+}
+
+/*css design for textfields*/
+.signupFields input {
+  display: block;
+  max-width: 900px;
+  width: 75%;
+  height: 50px;
+  size: 10rem;
+  background-color: aqua;
+  color: black;
+}
+
+ .signupFields input {
+  margin: 20px auto;
+  border-color: black;
+ box-shadow: 5px 5px 10px 2px rgba(16, 5, 77, 0.5);
+ }
+
+/*hide my calendar picker so I can customizee another*/
+input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0;
+  position: absolute;
+}
+
+/* div wrapper for calendar*/ 
+.input-wrapper{
+  position: relative;
+  display: flex;
+  align-items: center;     /* vertically centers the icon */
+  max-width: 900px;
+  width: 75%;              /* matches your input */
+  margin: 20px auto;
+}
+
+.input-wrapper input {
+  flex: 1;
+  height: 50px;
+  padding-right: 35px; /* space for the calendar icon */
+  box-sizing: border-box;
+  margin: 0; /* removes extra margin */ 
+}
+
+
+/*custom calendar edit for span */
+.calendar{
+ position: absolute;
+ right: 8px;
+ top: 50%;
+ transform: translateY(-50%);
+}
+
+/*actual icon*/
+.thisIcon{
+  width: 20px;
+  height: 20px; 
+  color: rgb(0, 0, 0);
+}
+
+footer {
+    background-color: rgb(63, 98, 212);
+    clear: both;
+    width: auto;
+    height: auto;
+}
+
+/* text for button */ 
+.signUpPage button {
+  display: flex;
+  justify-content: center;             
+  gap: 15px;                   
+  margin: 10px auto;
+  padding: 1em;
+  flex-wrap: wrap;              
+}
+
+.signUpPage button {
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.signUpPage button:hover {
+  transform: scale(1.05);
+  background: #3730a3;
+}
+/* code for background image*/
+/*   background-image: url(happy.svg); */
