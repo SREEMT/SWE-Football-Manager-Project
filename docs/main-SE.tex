@@ -179,8 +179,9 @@ Rails & Framework & Web application framework \\ \hline
 Docker & Containerizer & Containerize the app for consistency \\ \hline
 Redis & RAM-Based Database & Quick data retrieval and updates; ideal for real-time data \\ \hline
 React & UI Framework & Used for UI design and implementation \\ \hline
-MongoDB & Schema-Based Database & Long-term data storage; performance not critical \\ \hline
-RSpec & Testing tool & Used to test ruby code\\ \hline
+SQLite3 & Local SQL based Database & Long-term data storage; performance not critical \\ \hline
+minitest & Testing tool & Used to test ruby code\\ \hline
+SimpleCov & Coverage Report tool & Used to generate coverage report\\ \hline
 \end{tabular}
 \caption{Technologies used in the project}
 \label{tab:technologies}
@@ -433,7 +434,7 @@ We did not complete any stories because we did not fully understand how Ruby wor
     \caption{Test coverage from Alberto's end}
 \end{figure}
 
-Figure 6 *explain this test coverage*. 
+Figure 6: Iteration 1 test coverage is very minimal. We did not have time to implement tests. 
 
 \subsubsection{Retroespective \& Reflection}
 What we have learned from the first iteration as a group is that we need to rely on each other more, rather than having one person be the lead on programming. A lot of people were busy with different things to the point where they couldn't work on this project, in which we should have picked up where they left off. Another reason is that this is a new language that most of the group has not done at all, which makes it harder/longer for others pick up how to do it. Hopefully, in this next iteration, we can have 1 fully finished and work on the smaller stories in this one.
@@ -474,7 +475,7 @@ Alberto got U2 Inbox Screen completed and fully integrated. This feature has rea
     \label{fig:coverage-it2}
 \end{figure}
 
-Figure~\ref{fig:coverage-it2} *explain this test coverage*. 
+Figure~\ref{fig:coverage-it2} We implemented tests for almost every file in the backend. The notifications feature was created and tested with 94.44\% coverage. Tests for most of the other files were created. 
 
 \subsubsection{Retroespective \& Reflection}
 What we have learned from this is that we need more teamwork and communication. We also need to have everyone complete and work on their tasks in a timely manner. We cant have people work on their tasks last minute in case there is a major issue with the project as a whole. Implementing GitHub actions is something that will be necessary from now on. People need to commit enough, at least once daily and with good documentation. We need to utilize GitHub issues to track and document any bugs or features being implemented correctly. Using PRs is also included in this. Having other team mebers review each other's code is also something we should do.
@@ -506,11 +507,11 @@ For this Iteration, we got a lot of previous iterations done while having done t
 \subsubsection{Testing Coverage}
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.6\textwidth]{images/Test coverage.png}
+    \includegraphics[width=0.6\textwidth]{images/iter3testcoverage.png}
     \caption{Test coverage from Justin's end}
 \end{figure}
 
-Figure 8 *explain this test coverage*. 
+Figure 8: More testing was created and completed to achieve a total of 81.63\% coverage for the backend. Tests were made for the match feature. We also created tests for the password features. 
 
 \subsubsection{Retroespective \& Reflection}
 We achieved a lot of things from our backlog this iteration, while also getting most of our current iteration completed. The challenges we had this Iteration were communication and having problems with merging certain branches. For example, Justin had made a lot of changes in his own branch to which was a huge improvement from previous iterations, but the branch he was in was not on GitHub, so it made it harder to bring it over to Alberto's branch to have it reviewed. Another big thing was a bunch of redesigns from different pages, while being able to click to go to them.
@@ -537,7 +538,9 @@ We achieved a lot of things from our backlog this iteration, while also getting 
 \noindent \textit{Ose:}
 
 \vspace{0.3cm}
-\noindent \textit{Alberto:}
+\noindent \textit{Alberto:} I learned a lot about planning out larger team based projects. This was my first attempt at a software project of this scale with a team. I enjoyed working with the tech stack we chose and I learned a lot especially with the fronted. I also learned how to use GitHub more effectively with issues, issue referencing, workflows, branch rules, and project boards. I learned a lot about planning and its importance, I felt like it held me back a bit. I learned a lot about team management, writing documentation, effective commit messages, and more. A lot of the skills and lessons I learned mostly revolved around managing larger scaled projects and management skills. 
+
+I could have done better by planning better and managing my time better. A lot of my issues came from improper planning and time management. I would not manage my time efficiently and it would cost me. I also would have not chosen to use React considering the amount of learning I had to do. I enjoyed learning it but I wanted to have a good final product and it held me back. Choosing a full Rails stack with Hotwire would have made it easier. We would not have had to go through the effort of connecting the Rails API with the React Frontend. More proper pair programming would have been nice especially if we are learning new technologies. We should have made a larger effort to do this. I feel like we would have had less merge conflicts and would have pushed more code per person if we did this.
 
 \section*{Appendix}
 [Justin will post the images of each iteration down here]
