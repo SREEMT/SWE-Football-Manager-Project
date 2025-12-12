@@ -1,6 +1,4 @@
 import { RxAvatar } from "react-icons/rx";
-import { MdInbox } from "react-icons/md";
-import inboxIcon from  "../assets/inbox.svg";
 import "../styles/components/SettingsHeader.css"
 
 export default function SettingsHeader() {

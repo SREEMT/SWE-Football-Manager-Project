@@ -13,10 +13,10 @@ function App() {
   const [count, setCount] = useState(0)
  // Settings is there for testing the design
   return (
-    <div>
+    <>
       <Header/>
       <AppRoutes />
-    </div>
+    </>
   ) 
 }
 

@@ -36,8 +36,8 @@ export default function Header() {
                                     <li><Link to="/matches">Matches</Link></li>
                                     {isAuthenticated && (
                                     <li>
-                                        <Link to="/settings">
-                                            Settings
+                                        <Link to="/account">
+                                            Account
                                         </Link>
                                     </li>
                                 )}

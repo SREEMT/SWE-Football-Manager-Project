@@ -1,0 +1,109 @@
+.account {
+    background-color: #d9d9d9;
+    padding: 14px;
+}
+
+.accountContainer {
+    border-radius: 15px;
+    font-family: "Roboto", Arial;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.accountContentWrapper {
+    display: grid;
+    grid-template-columns: 0.2fr 0.8fr;
+    gap: 20px;
+    background: #FFFFFF;
+    color: #1E1E1E;
+}
+
+.account h1 {
+    color: #07326A;
+    font-size: 25px;
+    font-family: "Keania One", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.40px;
+    text-align: left;
+    display: block;
+    margin-bottom: 14px;
+}
+
+.accountNav {
+    border-right: 1px solid #d9d9d9;
+    padding: 20px;
+    min-width: 150px;
+}
+
+.accountNav li {
+    margin-bottom: 10px;
+}
+
+.accountNav li .btn-link {
+    font-size: 19px;
+    padding: 0.6em 1.2em;
+}
+
+.accountNav li .btn-link:hover {
+    border: 1px solid #646cff;
+}
+
+.btn-link {
+    color: #07326a;
+    font-size: 17px;
+    background-color: transparent;
+}
+
+.accountNav li button.btn-link {
+    color: #6A0707;
+    padding: 0.2em 1.2em;
+}
+
+.accountContent {
+    min-width: 515px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.accountContent h2 {
+    color: #07326A;
+    font-weight: 400;
+    letter-spacing: 0.40px;
+    text-align: left;
+    display: block;
+}
+
+.accountContent h3, .accountContent .account-email {
+    color: #07326A;
+    font-weight: 400;
+}
+
+.accountContent svg {
+    width: 100px;
+    height: 100px;
+}
+
+.profileImage {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profileImage svg {
+    width: 46px;
+    height: 46px;
+}
+/* Mobile version */
+@media screen and (max-width: 576px) {
+
+    .accountNav {
+        width: 40%;
+    }
+
+    .accountNav li a {
+        color: #07326a;
+        font-size: 11px;
+    }
+}

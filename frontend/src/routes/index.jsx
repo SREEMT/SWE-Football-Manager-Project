@@ -10,6 +10,7 @@ import Brackets from '../pages/Brackets'
 import MatchesPage from '../pages/MatchesPage'
 import MatchShow from '../pages/MatchShow'
 import Profile from '../pages/Profile'
+import Account from '../pages/Account'
 
 // Page routing paths for site
 export default function AppRoutes() {
@@ -27,6 +28,7 @@ export default function AppRoutes() {
         <Route path="/brackets" element={<Brackets />} />
         <Route path="/matches" element={<MatchesPage />} />
         <Route path="/matches/:id" element={<MatchShow />} />
+        <Route path="/account" element={<Account />} />
       </Routes>
     </main>
   )
