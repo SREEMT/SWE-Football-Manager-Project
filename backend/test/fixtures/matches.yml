@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  match_time: 2025-11-23 16:52:28
+  match_date: 2025-11-23
+  location: MyString
+  team1: MyString
+  team2: MyString
+  match_type: 1
+  players: 
+  score1: 1
+  score2: 1
+
+two:
+  match_time: 2025-11-23 16:52:28
+  match_date: 2025-11-23
+  location: MyString
+  team1: MyString
+  team2: MyString
+  match_type: 1
+  players: 
+  score1: 1
+  score2: 1
