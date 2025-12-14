@@ -40,7 +40,7 @@ export default function Login() {
                 <div className='aside-upper'>
                     <h2>Sign-up here</h2>
                     <p>Join the Keeper crew and manage your soccer career</p>
-                    <Link to="/sign-up" className='btn-secondary'>Sign-up</Link>
+                    <Link to="/sign" className='btn-secondary'>Sign-up</Link>
                 </div>
                 <div className="aside-lower">
                     <p>Take a peek into the Keeper family</p>

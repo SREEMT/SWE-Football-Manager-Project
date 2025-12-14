@@ -1,0 +1,93 @@
+.signup-wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    margin-top: -10px;
+    min-height: 97vh;
+    background-color: #7182C7;
+    padding: 50px;
+}
+
+.signup-form {
+    background-color: #2238A4;
+    padding: 50px;
+}
+
+.signup-wrapper form {
+    background-color: #A0ACDC;
+    padding: 50px;
+    height: 100%;
+    gap: 20px;
+    border-radius: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.signup-form h1 {
+    font-size: 38px;
+    font-family: "Keania One", sans-serif;
+    color: #000;
+}
+
+form h1 {
+    border-bottom: 3px solid #6E6D72;
+    padding-bottom: 20px;
+}
+
+.signup-wrapper .form-group {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.signup-wrapper .form-group svg {
+    color: #000;
+    width: 23px;
+    height: 23px;
+}
+
+.signup-wrapper form input {
+    display: block;
+    background-color: #F7F7F7;
+    width: 100%;
+    padding: 10px 10px 8px;
+    border: none;
+    color: #000;
+}
+
+.signup-wrapper .form-group .btn-link {
+    font-size: 12px;
+}
+
+.signup-wrapper form input::placeholder {
+    font-size: 15px;
+}
+
+.signup-wrapper form .btn-primary {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    margin: 0 auto;
+    background-color: #2238A4;
+}
+
+.form-ext {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    color: #D6D6D6;
+}
+
+.signup-wrapper .form-ext input {
+    width: initial;
+}
+
+.form-ext a {
+    color: #2238A4;
+}
+
+.form-ext.form-agree {
+    margin-top: -10px;
+}
