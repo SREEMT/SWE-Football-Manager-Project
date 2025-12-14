@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-// import { RxAvatar } from "react-icons/rx";
+import { RxAvatar } from "react-icons/rx";
 import '../styles/Settings.css'
 
 export default function Settings(){
