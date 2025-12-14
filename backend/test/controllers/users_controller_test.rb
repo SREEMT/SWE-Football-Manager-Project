@@ -52,15 +52,18 @@ test "POST /create renders new user form" do
     assert_nil json["user"]["password_digest"], "Response should not include password_digest"
   end
 
-  test "POST /users with invalid parameters does not create user" do
-    assert_no_difference("User.count") do
-      post users_url, params: @invalid_user_params, as: :json
-    end
+ test "POST /users with invalid parameters does not create user" do
+  assert_no_difference("User.count") do
+    post users_url, params: @invalid_user_params, as: :json
+  end
 
-    assert_response :unprocessable_entity
-    json = JSON.parse(response.body)
-    assert_includes json["message"], "could not do the sign up"
-    end
+  assert_response :unprocessable_entity
+
+  json = JSON.parse(response.body)
+
+  assert json["errors"].present?
+  assert_includes json["errors"].join(" "), "can't be blank"
+end
 
 test "POST /users with valid_parameters_are_created_and_logged_in" do
   assert_difference("User.count", 1) do
