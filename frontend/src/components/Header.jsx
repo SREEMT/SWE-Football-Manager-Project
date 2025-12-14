@@ -9,10 +9,13 @@ export default function Header() {
     const navigate = useNavigate();
     const { isAuthenticated, logout } = useAuth() || {};
     const [isLoginPage, setIsLoginPage] = useState(false);
+    const [isSignupPage, setIsSignupPage] = useState(false);
 
     useEffect(() => {
         setIsLoginPage(location.pathname === "/login");
+        setIsSignupPage(location.pathname === "/signup")
     }, [location.pathname]);
+
     const handleLogout = async () => {
         if (logout){
             await logout();
@@ -36,8 +39,8 @@ export default function Header() {
                                     <li><Link to="/matches">Matches</Link></li>
                                     {isAuthenticated && (
                                     <li>
-                                        <Link to="/settings">
-                                            Settings
+                                        <Link to="/account">
+                                            Account
                                         </Link>
                                     </li>
                                 )}

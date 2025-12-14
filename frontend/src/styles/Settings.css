@@ -11,28 +11,28 @@
 }
 
 .settingsContentWrapper {
-    display: flex;
+    display: grid;
+    grid-template-columns: 0.4fr 1fr;
     gap: 20px;
-    padding: 20px;
     background: #FFFFFF;
     color: #1E1E1E;
 }
 
 .settings h1 {
     color: #07326A;
-    font-size: 20px;
+    font-size: 25px;
     font-family: "Keania One", sans-serif;
     font-weight: 400;
     letter-spacing: 0.40px;
     text-align: left;
     display: block;
     margin-bottom: 14px;
-    margin-left: 10px;
 }
 
 .settingsNav {
     border-right: 1px solid #d9d9d9;
-    padding-right: 16px;
+    min-width: 150px;
+    padding: 20px;
 }
 
 .settingsNav li {
@@ -41,12 +41,13 @@
 
 .btn-link {
     color: #07326a;
-    font-size: 14px;
+    font-size: 17px;
     background-color: transparent;
 }
 
 .settingsContent {
     min-width: 515px;
+    padding: 20px;
 }
 
 .settingsContent h2 {
@@ -76,7 +77,9 @@ form.profile-form {
     flex-direction: row;
     align-items: baseline;
     gap: 10px;
-    height: 100%;
+    height: auto;
+    padding-top: 50px;
+    margin-top: 30px;
 }
 
 form.profile-form .formGroup {

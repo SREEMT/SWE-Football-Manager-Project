@@ -1,11 +1,11 @@
 
-import '../styles/Settings.css'
 import SettingsHeader from '../components/SettingsHeader';
 import ProfileChange from '../components/ProfileChange';
 import PasswordChange from '../components/PasswordChange';
 import { useState } from 'react';
 import NotificationChange from '../components/NotificationChange';
 import DeleteProfile from '../components/DeleteProfile';
+import '../styles/Settings.css'
 
 const PANELS = {
     PROFILE: "PROFILE",
