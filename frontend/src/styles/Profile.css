@@ -1,0 +1,98 @@
+/* css edit for table */ 
+  table {
+    width: 95%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-left: 2rem; /* adjust this value */
+    margin-top: 20px;
+}
+
+table tr:hover {
+    background-color: #f5f5f5;
+  }
+
+/*Styling for username text*/
+.ProfileText {
+    display: flex;
+    font: 40px sans-serif;
+    text-align: center;
+    justify-content: center;
+    color: orangered;
+}
+
+/* When it's in edit mode (input) */
+input.ProfileText {
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  border-radius: 6px;
+  outline: none;
+margin: 10px auto; 
+  display: block;
+}
+
+/* Optional: nice focus effect */
+input.ProfileText:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 2px rgba(79,70,229,0.2);
+}
+
+/* edit for generic profile pic */
+.ProfilePicture {
+    border: 6px solid #573e08;
+    border-radius: 50%;
+    height: 20rem !important;
+    margin: 0 auto 1.25rem auto;
+    max-width: none !important;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 20rem;
+    z-index: 2;
+    align-content: center;
+  }
+
+.ProfilePicture{
+    display: block;
+    margin: auto;
+}
+
+ th, td {
+    text-align: left;
+    margin: 0 auto;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  /* styling for profile buttons*/
+.profileButtons {
+  display: flex;
+  justify-content: center;             
+  gap: 15px;                   
+  margin: 10px auto;
+  padding: 1em;
+  flex-wrap: wrap;              
+}
+
+.profileButtons button {
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.profileButtons button:hover {
+  transform: scale(1.05);
+  background: #3730a3;
+}
+
+.changephoto{
+    background-color: yellow;
+    color: black;
+}
+.deleteaccount{
+    background-color: red;
+}
+.updatepassword{
+    background-color: blue;
+}
+.removephoto{
+    background-color: aqua;
+    color: black;
+}

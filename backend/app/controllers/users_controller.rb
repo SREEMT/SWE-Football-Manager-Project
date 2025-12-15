@@ -22,7 +22,7 @@ allow_unauthenticated_access only: %i[new create]
             start_new_session_for @user
             render json: { message: 'User created successfully and logged in', user: safe_user(@user) }, status: :created
         else
-            render json: { message: "could not do the sign up" }, status: :unprocessable_entity
+            render json: {  errors: @user.errors.full_messages }, status: :unprocessable_entity
         end
     end
 

@@ -9,7 +9,6 @@ export default function Profile() {
     const [activeTab, setActiveTab] = useState("matches");
     const [team,setTeam1] = useState('Team Name');
 
-
     return (
         <>
             <h1>{team}</h1>
