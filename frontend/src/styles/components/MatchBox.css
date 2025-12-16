@@ -1,0 +1,20 @@
+.teamLogo {
+    width: 10%;
+    height: auto;
+}
+
+.matchBox{
+    text-align:center;
+}
+
+.matchInfo{
+    text-align:center;
+    background-color: rgb(71, 71, 71);
+    width: 50%;
+}
+
+.reactionButtons{
+   text-align:center;
+    background-color: rgb(135, 135, 135); 
+    width: 50%;
+}

@@ -1,5 +1,6 @@
 import place_holder from '../assets/placeHolder.png';
 import { Link } from 'react-router-dom';
+import '../styles/components/MatchBox.css'
 
 export default function MatchCard({
   matchLink = '#',
