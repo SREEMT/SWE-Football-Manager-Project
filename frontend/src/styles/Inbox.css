@@ -1,0 +1,81 @@
+.inbox-wrapper {
+    background-color: #D9D9D9;
+    padding: 40px 0;
+    margin-top: -10px;
+}
+
+.inbox-wrapper h1 {
+    font-size: 38px;
+    font-family: "Keania One", sans-serif;
+    color: #07326A;
+}
+
+.inbox-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.inbox {
+    display: grid;
+    grid-template-columns: 0.4fr 1.6fr;
+    gap: 40px;
+    color: #000;
+}
+
+.inbox-left {
+    border-radius: 20px;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.inbox-right {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 10px;
+    min-height: 500px;
+}
+
+.toggle-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto 15px;
+    width: fit-content;
+    gap: 0;
+}
+
+.btn-push {
+    background-color: #0D3BC3;
+    color: #fff;
+    min-width: 70px;
+    padding: 5px 6px;
+    font-weight: 400;
+    border-radius: 0;
+}
+
+.btn-push-secondary {
+    background-color: #6E6D72;
+}
+
+.inbox-messages-search {
+    position: relative;
+    margin-top: 10px;
+    border-top: 2px solid #D9D9D9;
+    padding-top: 10px;
+}
+
+.inbox-messages-search svg {
+    position: absolute;
+    left: 10px;
+    top: 15px;
+}
+
+.inbox-messages-search input {
+    width: 100%;
+    display: block;
+    background: #D9D9D9;
+    border: none;
+    padding: 5px 5px 5px 20px;
+}
